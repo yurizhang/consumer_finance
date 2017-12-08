@@ -13,7 +13,7 @@
   	        <li>
                 <p class="threeColor">{{item.productName}}</p>
                 <p class="nFcost_red">
-					<span>￥{{number_format(item.price)}}元</span><span>{{item.periods}}期</span><img src="https://ssl.tuniucdn.com/img/2015070110/jinrong/mNiukebao/nduidui/xiangyou.png"/>
+					<span>￥{{number_format(item.price)}}元</span><span>{{item.periods}}期</span><img :src="right_arrow"/>
 					<span class="sixColor">{{stateText(item.state)}}</span>
                 </p>
                 <p class="nineColor">申请日期：{{item.applyDate}}</p>
@@ -44,11 +44,14 @@ LISTSTATE[1]='已还清';
 LISTSTATE[2]='待还款';
 LISTSTATE[3]='已逾期';
 
+import right_arrow from '../../common/img/right_arrow.png'
 export default {
   name: "button",
   data(){
 	  return{
-		  billList:[]
+		  billList:[],
+
+		  right_arrow
 	  }
   },
   created(){

@@ -159,9 +159,8 @@ a,button,input {
 .form-table .form-line .support {
     position: absolute;
     right: 5%;
-    bottom: -70%;
     color: #2aaeff;
-    font-size: .8rem
+    font-size: 12px
 }
 
 .form-table .form-line+.form-line .form-input {

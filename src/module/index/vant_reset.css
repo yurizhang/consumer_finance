@@ -6,3 +6,6 @@
   padding-left: 10px;
   background-color:transparent !important;
 }
+.fixed-van-nav-bar{
+  z-index: 1000;
+}

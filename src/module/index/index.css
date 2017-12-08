@@ -173,6 +173,9 @@ for index.vue
     width: 100%;
     overflow: hidden
 }
+.all_title {
+    margin-top:46px;
+}
 
 .threeColor {
     color: #333
@@ -888,16 +891,17 @@ for index.vue
 
 .bill {
     width: 100%;
-    overflow: hidden;
-    background-color: #fff;
+    overflow: hidden;   
     font-size: 2.2rem
 }
 
 .bill li {
     width: 100%;
     overflow: hidden;
-    border-bottom: 1px solid #cfcfcf;
-    padding: 10px
+    /* border-bottom: 1px solid #cfcfcf; */
+    padding: 10px;
+    background-color: #fff;
+    margin:5px 0;
 }
 
 .bill li p:nth-child(3) {

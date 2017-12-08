@@ -1,7 +1,7 @@
 <template>
 <div>
-
-    <div class="all">
+    <van-nav-bar title="我的首付出发" leftArrow fixed leftText="返回" class="fixed-van-nav-bar"  @click-left="backIndex()"></van-nav-bar>
+    <div class="all all_title">
         <header class="record">            
             <p>{{billDetail.productName}}</p>
             <p><span>下单日期：{{billDetail.orderDate}}</span><span>订单号：{{billDetail.orderID}}</span></p>
@@ -105,6 +105,10 @@ const origin_result=[];   //用于缓存当前所有的列表id
 	        this.getDetail(id);
     },
     methods:{
+        backIndex() {		  
+		  this.$router.push({ path: '/list'})
+		  return;
+	    },
         getDetail(id){
             	 __REQUEST.bizParams={
                     "id": id

@@ -1,6 +1,8 @@
 <template>
 <div>
-    <div class="form-table add-bank-card">
+
+    <van-nav-bar title="我的首付出发" leftArrow leftText="返回"  @click-left="backIndex()"></van-nav-bar>
+    <div class="form-table add-bank-card" v-if="oneStep">
         <div class="form-line">
             <label class="form-label">持卡人姓名</label>
             <p class="form-input">*磊</p>
@@ -12,7 +14,6 @@
         <div class="form-line">
             <label class="form-label">银行卡号</label>
             <p class="form-input">
-                <!-- <input type="number" id="cardNo"  placeholder="请输入支持银行卡号" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')" ><span class="close">×</span> -->
                 <van-field
                     v-model="cardNo"                   
                     id="cardNo"
@@ -25,38 +26,47 @@
                 </van-field>
 
             </p>
-            <a href="javascript:;" @click="supportBankList()" class="support">支持银行</a>
+            <p><a href="javascript:;" @click="supportBankList()" class="support">支持银行</a></p>
         </div>
 
     </div>
 
-    <a href="javascript:;" class="btn-primary">下一步</a>
 
-
-    <div class="form-table">
+    <div class="form-table" v-if="twoStep">
         <div class="form-line">
             <label class="form-label">预留手机号</label>
-            <p class="form-input"><input id="phone" type="text" placeholder="请输入银行预留手机号"></p>
+            <p class="form-input">               
+                <van-field
+                    v-model="phoneNumber"                   
+                    id="phoneNumber"
+                    type="number"
+                    icon="clear"
+                    placeholder="请输入银行预留手机号"
+                    required
+                    @click-icon="phoneNumber = ''"
+                >
+                </van-field>
+            
+            </p>
         </div>
         <div class="form-line">
             <label class="form-label">验证码</label>
             <p class="form-input"><input type="text" placeholder="点击获取验证码" id="verifyCode">
                 <input type="button" value="获取验证码"  class="get-code">
             </p>
-        </div>
-        <div class="error">验证码错误</div>
+        </div>        
     </div>
-    <a href="javascript:;" class="btn-primary">下一步</a>
+    <a href="javascript:;" class="btn-primary" @click="controllStep()" v-if="currentStep < 3">下一步</a>
 
 
-    <div class="result">
+    <div class="result" v-if="result_success">
         <img src="https://ssl.tuniucdn.com/img/20161207/fin/chm/sfcf/result_success.png">
         <p class="result-info">添加成功</p>
         <a href="/xdm/m/index/main" class="btn">查看我的首付出发</a>
     </div>
 
 
-    <div class="result">
+    <div class="result" v-if="result_fail">
         <img src="https://ssl.tuniucdn.com/img/20161207/fin/chm/sfcf/result_fail.png">
         <p class="result-info">
             <span>出错啦</span><br>
@@ -106,11 +116,30 @@ export default {
   name: "addBank",
   data(){
       return {
-          cardNo:''
+          cardNo:'',
+          phoneNumber:'12345',
+          
+          
+          //以下控制 
+          currentStep:1, //表示当前第几步
+
+          result_success: false,  //显示成功
+          result_fail:false, //显示失败
+
+          oneStep: true,  //上一步
+          twoStep: false  //下一步
       }
   },
   methods: {
-
+    backIndex() {		  
+		  this.$router.push({ path: '/banklist'});  // , query: { from: 'list' }}
+		  return;
+        //   Dialog.alert({
+        //     message: '弹窗内容---'
+        //   }).then(() => {
+        //       alert("clsoed");
+        //   });
+	},
     supportBankList() {
           Dialog.alert({
             title:'储蓄卡',
@@ -119,12 +148,30 @@ export default {
               //alert("clsoed");
           });
 
+    },
+    controllStep(){
+        console.log(this.currentStep);
+
+        if(this.currentStep==1){
+            //当前在第一步，跳到第二步
+            //js验证
+            this.oneStep=false;
+            this.twoStep=true;
+            this.currentStep=2;
+        }else if(this.currentStep==2){
+            //当前在第2步，跳到第3步 显示成功或是失败
+            //js验证
+            //ajax
+            this.twoStep=false;            
+            this.result_success=true;
+            //this.result_fail=false;
+
+            this.currentStep=3;
+        }
+
     }
   }
-  //,
-//   components:{
-//       'van-field':Field
-//   }
+
 
 }
 </script>
