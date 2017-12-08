@@ -1,0 +1,277 @@
+body {
+    font-family: sans-serif, Arial;
+    font-size: 13px;
+    color: #fff;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+ul.block-list > li {
+    display: block;
+}
+
+ul.block-list > li + li {
+    margin-top: 10px;
+}
+
+ul.inline-block > li {
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+
+ul.inline-block > li + li {
+    margin-left: 10px;
+}
+
+.section {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section1 {
+    background-image: url(../images/slide-bg1.jpg);
+}
+
+.section2 {
+    background-image: url(../images/slide-bg2.jpg);
+}
+
+.section3 {
+    background-image: url(../images/slide-bg3.jpg);
+}
+
+.section4 {
+    background-image: url(../images/slide-bg4.jpg);
+}
+
+.section1 header {
+    height: 80px;
+    background-color: rgba(109, 111, 159, .4);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#666d6f9f, endColorstr=#666d6f9f); /*IE8支持*/
+    padding: 0 400px;
+    color: #fff;
+    overflow: hidden;
+}
+
+.section1 header .logo {
+    margin-top: 20px;
+}
+
+.section1 header > section {
+    float: right;
+    margin-top: 20px;
+}
+
+.section1 header .header-item {
+    padding-left: 18px;
+    height: 14px;
+    line-height: 14px;
+}
+
+.section1 header .header-item + .header-item {
+    margin-top: 8px;
+}
+
+.bg-icon {
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: contain;
+}
+
+.icon-phone {
+    background-image: url(../images/phone.png);
+}
+
+.icon-clock {
+    background-image: url(../images/time.png);
+}
+
+.icon-money {
+    background-image: url(../images/money.png);
+}
+
+.icon-pay-for {
+    background-image: url(../images/pay-for.png);
+}
+
+.icon-credit {
+    background-image: url(../images/credit.png);
+}
+
+.icon-one-click {
+    background-image: url(../images/one-click.png);
+}
+
+.icon-online-audit {
+    background-image: url(../images/online-audit.png);
+}
+
+.icon-flow {
+    background-image: url(../images/flow.png);
+}
+
+.icon-haste-returns {
+    background-image: url(../images/haste-returns.png);
+}
+
+.icon-flexible-repayment {
+    background-image: url(../images/flexible-repayment.png);
+}
+
+.icon-high-limit {
+    background-image: url(../images/high-limit.png);
+}
+
+.icon-low-rate {
+    background-image: url(../images/low-rate.png);
+}
+
+.icon-buy {
+    background-image: url(../images/buy.png);
+}
+/* section1 */
+.img-show {
+    position: absolute;
+}
+
+.img-show.img-phone {
+    left: 50%;
+    margin-left: 80px;
+    top: -30%;
+    margin-top: -280px;
+}
+
+.img-show.img-code {
+    left: 50%;
+    margin-left: -160px;
+    top: 130%;
+    margin-top: -90px;
+}
+
+.img-show.img-title-1 {
+    left: 30%;
+    margin-left: -400px;
+    top: 50%;
+    margin-top: -210px;
+}
+
+ul.block-list1 {
+    display: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    top: 50%;
+    margin-top: -100px;
+}
+
+ul.block-list.block-list1 > li + li {
+    margin-top: 30px;
+}
+
+ul.block-list.block-list1 > li {
+    height: 53px;
+    line-height: 25px;
+    padding-left: 68px;
+}
+
+/* section2 */
+.img-show.img-title-2 {
+    left: 50%;
+    margin-left: 100px;
+    top: 50%;
+    margin-top: -50px;
+}
+
+.section2 > section {
+    position: absolute;
+    left: 50%;
+    margin-left: 110px;
+    top: 50%;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 5px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer-container {
+    overflow: hidden;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-container > h2,
+.footer-container > ul {
+    float: left;
+}
+
+.footer-container > h2 {
+    display: none;
+}
+
+.footer-container > ul {
+    margin-left: 150px;
+    border-left: 1px solid #fff;
+}
+
+.footer-container > ul > li {
+    display: none;
+    margin-left: 80px;
+    padding-left: 60px;
+}
+
+.footer-container > ul > li + li {
+    margin-left: 160px;
+}
+
+/* section 3 */
+.img-show.img-title-3 {
+    left: 50%;
+    margin-left: -470px;
+    top: 50%;
+    margin-top: -50px;
+}
+
+.section3 > section {
+    position: absolute;
+    left: 50%;
+    margin-left: -460px;
+    top: 50%;
+    margin-top: 30px;
+    line-height: 1.5;
+}
+
+/* section 4 */
+.img-show.img-title-4 {
+    left: 50%;
+    margin-left: 140px;
+    top: 50%;
+    margin-top: -130px;
+}
+
+.section4 > section {
+    position: absolute;
+    left: 50%;
+    margin-left: 150px;
+    top: 50%;
+    margin-top: 10px;
+    line-height: 1.5;
+}

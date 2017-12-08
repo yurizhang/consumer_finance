@@ -1,0 +1,8 @@
+/* 用于重写vant的样式 */
+.cell-margin{
+    margin: 5px 0;
+}
+.van-cell-group-refine{
+  padding-left: 10px;
+  background-color:transparent !important;
+}

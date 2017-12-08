@@ -1,0 +1,141 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 业务css */
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/bg-main.png");
+}
+
+.img {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header .logo, .header .slogan {
+}
+
+.header img.logo {
+  margin-top: 9.5vh;
+  max-height: 482px;
+  height: 23.8vh;
+}
+
+.header img.slogan {
+  margin-top: 6vh;
+  max-height: 206px;
+  height: 10vh;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 42vh;
+  min-height: 300px;
+  box-sizing: border-box;
+  padding-top: 90px;
+  background-image: url("../images/footer-bg.png");
+}
+
+.footer .row:nth-child(1) {
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.footer .row:nth-child(3) {
+  justify-content: space-around;
+  align-items: flex-end;
+  padding-bottom: 25px;
+  padding-top: 3vh;
+}
+
+.footer .sub-title {
+  max-height: 245px;
+  height: 12vh;
+}
+
+.footer .sub-title + .sub-title {
+  margin-left: 12vw;
+}
+
+.footer .btn {
+  height: 6.7vh;
+  width: 60vw;
+  font-size: 3vh;
+  background-color: black;
+  color: white;
+  line-height: 6.7vh;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 3.2vh;
+}
+
+.footer img.site {
+  max-height: 62px;
+  height: 3vh;
+}

@@ -1,0 +1,488 @@
+
+/* input {
+    border: 0;
+    outline: 0;
+    font-family: 'microsoft yahei';
+    font-size: 1rem;
+    -webkit-appearance: none
+}
+
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button {
+    -webkit-appearance: none
+}
+
+input[type=number] {
+    -moz-appearance: textfield
+}
+
+a,button,input {
+    -webkit-tap-highlight-color: transparent
+} */
+
+.btn-default,.btn-primary {
+    display: inline-block;
+    padding: 3% 0;
+    margin-left: 5%;
+    width: 90%;
+    text-align: center;
+    border-radius: 5px
+}
+
+.disabled.btn-default,.disabled.btn-primary {
+    background-color: #ccc
+}
+
+.btn-default:focus,.btn-default:hover,.btn-primary:focus,.btn-primary:hover {
+    color: #fff
+}
+
+.btn-default {
+    background: #ffb600;
+    color: #fff
+}
+
+.btn-primary {
+    background: #2aaeff;
+    color: #fff
+}
+
+.icon-checkbox {
+    width: .88rem;
+    height: .88rem;
+    background: url(https://ssl.tuniucdn.com/img/20161207/fin/chm/sfcf/agree.png);
+    -webkit-background-size: 200% 100%;
+    -moz-background-size: 200% 100%;
+    -ms-background-size: 200% 100%;
+    -o-background-size: 200% 100%;
+    background-size: 200% 100%;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: -2px
+}
+
+.icon-checkbox.disagree {
+    background-position: 100% 0
+}
+
+
+.form-table {
+    margin-bottom: 10%;
+    border-top: .6rem solid #eee
+}
+
+.form-table .form-line {
+    position: relative;
+    background-color: #fff;
+    font-size: 0
+}
+
+.form-table .form-line:after,.form-table .form-line:before {
+    content: " ";
+    display: table
+}
+
+.form-table .form-line:after {
+    clear: both
+}
+
+.form-table .form-line .form-input,.form-table .form-line .form-label {
+    display: inline-block;
+    padding: 2.5% 0;
+    line-height: 20px;
+    font-size: 2.4rem;
+    vertical-align: middle
+}
+
+.form-table .form-line .form-label {
+    width: 30%;
+    padding-left: 5%
+}
+
+.form-table .form-line .form-input {
+    position: relative;
+    width: 70%
+}
+
+.form-table .form-line .form-input input {
+    width: 100%;
+    line-height: 20px
+}
+
+.form-table .form-line .form-input .close,.form-table .form-line .form-input .get-code {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 7%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.form-table .form-line .form-input .close {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #aaa;
+    color: #fff;
+    text-align: center;
+    line-height: 1rem
+}
+
+.form-table .form-line .form-input .close.show {
+    display: block
+}
+
+.form-table .form-line .form-input .get-code {
+    width: 32%;
+    padding: 1.5% 2%;
+    background: #f5f5f5;
+    color: #6D6D6D;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+    font-size: .8rem
+}
+
+.form-table .form-line .form-input .get-code.disabled {
+    background: #fff;
+    color: #999;
+    -webkit-opacity: 1;
+    opacity: 1;
+    border: 0;
+    border-radius: 0;
+    border-left: 1px solid #d4d4d4;
+    padding: 0
+}
+
+.form-table .form-line .support {
+    position: absolute;
+    right: 5%;
+    bottom: -70%;
+    color: #2aaeff;
+    font-size: .8rem
+}
+
+.form-table .form-line+.form-line .form-input {
+    border-top: 1px solid #e5e5e5
+}
+
+.form-table .error {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,.7);
+    color: #fff;
+    padding: 2% 4%;
+    border-radius: 5px
+}
+
+.form-table .error.show {
+    display: block
+}
+.bank-support-list  .bank-list{
+    height: 220px;
+    padding: 0 15px;
+    overflow: scroll;
+}
+.bank-support-list  .bank-list ul li {
+    position: relative;
+    padding: 5% 0
+}
+
+.bank-support-list  .bank-list ul li .bank-icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 12%;
+    padding-top: 12%
+}
+
+.bank-support-list .bank-list ul li .bank-name {
+    padding-left: 16%
+}
+
+.bank-support-list .bank-list ul li .bank-name i {
+    font-size: .8rem;
+    vertical-align: baseline
+}
+
+.BOS {
+    background: url(https://ssl.tuniucdn.com/img/20150729/jinrong/mNiukebao/pay/bankNew/BOS.png) center no-repeat;
+    background-size: 90%
+}
+
+.ICBC {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/ICBC.png) center no-repeat;
+    background-size: 90%
+}
+
+.CMBC {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/CMBC.png) center no-repeat;
+    background-size: 90%
+}
+
+.ABC {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/ABC.png) center no-repeat;
+    background-size: 90%
+}
+
+.COMM {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/COMM.png) center no-repeat;
+    background-size: 90%
+}
+
+.GDB {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/GDB.png) center no-repeat;
+    background-size: 90%
+}
+
+.CIB {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/CIB.png) center no-repeat;
+    background-size: 90%
+}
+
+.BOC {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/BOC.png) center no-repeat;
+    background-size: 90%
+}
+
+.PSBC {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/PSBC.png) center no-repeat;
+    background-size: 90%
+}
+
+.CITIC {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/CITIC.png) center no-repeat;
+    background-size: 90%
+}
+
+.SPDB {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/SPDB.png) center no-repeat;
+    background-size: 90%
+}
+
+.HXB {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/HXB.png) center no-repeat;
+    background-size: 90%
+}
+
+.CCB {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/CCB.png) center no-repeat;
+    background-size: 90%
+}
+
+.CMB {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/CMB.png) center no-repeat;
+    background-size: 90%
+}
+
+.SZPAB {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/SZPAB.png) center no-repeat;
+    background-size: 90%
+}
+
+.CEB {
+    background: url(https://ssl.tuniucdn.com/img/201507010/jinrong/mNiukebao/pay/bankNew/CEB.png) center no-repeat;
+    background-size: 90%
+}
+
+.BCCB {
+    background: url(https://ssl.tuniucdn.com/img/20150807/jinrong/mNiukebao/pay/bankNew/BCCB.png) center no-repeat;
+    background-size: 90%
+}
+.bank-manage {
+    padding-top: 5%;
+}
+
+.bank-manage .add-btn,.bank-manage .bank-item {
+    margin: 5% auto;
+    width: 90%;
+    border-radius: 6px
+}
+
+.bank-manage .bank-item {
+    padding: 4% 0
+}
+
+.bank-manage .bank-item:nth-child(1) {
+    margin-top: 0
+}
+
+.bank-manage .bank-item:after,.bank-manage .bank-item:before {
+    content: " ";
+    display: table
+}
+
+.bank-manage .bank-item:after {
+    clear: both
+}
+
+.bank-manage .bank-item.bg-BCCB,.bank-manage .bank-item.bg-BOC,.bank-manage .bank-item.bg-CITIC,.bank-manage .bank-item.bg-CMB,.bank-manage .bank-item.bg-GDB,.bank-manage .bank-item.bg-HXB,.bank-manage .bank-item.bg-ICBC {
+    background-color: #f25663
+}
+
+.bank-manage .bank-item.bg-CCB,.bank-manage .bank-item.bg-CIB,.bank-manage .bank-item.bg-COMM,.bank-manage .bank-item.bg-SPDB {
+    background-color: #5082bf
+}
+
+.bank-manage .bank-item.bg-ABC,.bank-manage .bank-item.bg-CMBC,.bank-manage .bank-item.bg-PSBC {
+    background-color: #50a993
+}
+
+.bank-manage .bank-item.bg-BOS,.bank-manage .bank-item.bg-CEB,.bank-manage .bank-item.bg-SZPAB {
+    background-color: #f5bf55
+}
+
+.bank-manage .bank-item .bank-icon {
+    float: left;
+    width: 20%;
+    text-align: center
+}
+
+.bank-manage .bank-item .bank-icon span {
+    position: relative;
+    display: inline-block;
+    width: 58%;
+    padding-top: 58%;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.6);
+    overflow: hidden;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 3px solid rgba(255,255,255,.6)
+}
+
+.bank-manage .bank-item .bank-icon span img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+.bank-manage .bank-item .bank-detail {
+    width: 80%;
+    float: right;
+    color: #fff
+}
+
+.bank-manage .bank-item .bank-detail .bank-name {
+    font-size: 2.5rem
+}
+
+.bank-manage .bank-item .bank-detail .bank-id {
+    margin-top: 3%;
+    font-size: 2.8rem
+}
+
+
+.bank-manage .add-btn {
+    padding: 6% 0;
+    text-align: center;
+    border: 2px dashed #e5e5e5
+}
+
+.bank-manage .add-btn a {
+    font-size: 2.2rem;
+    color: #007aff
+}
+
+.bank-manage .add-btn a:before {
+    content: '+';
+    font-size: 4rem;
+    vertical-align: -.2rem
+}
+
+.tips {
+    width: 90%;
+    margin: 0 auto
+}
+
+.tips h6 {
+    font-weight: 400;
+    color: #666;
+    font-size: 1.1rem
+}
+
+.tips ul li {
+    color: #999;
+    font-size: .95rem
+}
+
+.bank-box {
+    background-color: #fff;
+    padding: 6% 5%;
+    margin: 4% 0 3%
+}
+
+.bank-detail .bank-type {
+    font-size: 1.8rem;
+   
+}
+
+
+
+/*开通成功或是失败*/
+.result {
+    padding-top: 15%;
+    text-align: center
+}
+
+.result img {
+    width: 48%
+}
+
+.result .result-info {
+    font-size: 1.4rem;
+    margin-top: 5%;
+    margin-bottom: 12%
+}
+
+.result .jump-info {
+    color: #999;
+    font-size: .8rem;
+    margin-bottom: 5%;
+    line-height: 1.8
+}
+
+.result .jump-link {
+    text-decoration: underline;
+    color: #1fbad6
+}
+
+.result .btn {
+    display: inline-block;
+    height: 2.5rem;
+    padding: 0 3rem;
+    background: #2aaeff;
+    color: #fff;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    border-radius: 50px
+}
+
+.result .btn.disabled {
+    background-color: #ccc
+}
+
+.agreement p{
+    margin: 4% 0 4% 5%;    
+    color: #999;
+    font-size: 1.8rem;
+}

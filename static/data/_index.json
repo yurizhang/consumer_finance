@@ -1,0 +1,24 @@
+{
+    "success": true,
+    "msg": null,
+    "errorCode": 1,
+    "desc":"availableQuota:可用额度  weekNeedToPay:近7日待还款 fixedQuota：固定额度,AllofNeedToPay:所有待还款 couponNumber：优惠卷 overdueNeedToPay：逾期待还款    addQuotoType: 提额类型，(0，不符合提额需求  1. 可以提固定额度 2，可以提临时宽度) availableAddQuoto：可提临时额度    ",
+    "data": {
+        "availableQuota": 3000,
+        "weekNeedToPay": 30,
+        "fixedQuota": 2000,
+        "AllofNeedToPay": 1,
+        "couponNumber": 3,
+        "overdueNeedToPay": 123,
+
+        "addQuotoType": 2,
+        "availableAddQuoto": "123450",
+
+
+
+
+        "alertMessageTitle":"民生银行系统维护, 首付出发暂停民生银行卡还款",
+        "alertMessageContent":"尊敬的首付出发用户：由于民生银行目前处于系统维护中，维护期间首付出发支付、还款业务暂不支持民生银行卡，为保证您的还款不受影响，请使用其他银行卡进行主动还款，给您带来不便，敬请谅解~"
+
+    }
+}

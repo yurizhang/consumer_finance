@@ -1,0 +1,8 @@
+{
+    "success": false,
+    "msg": "发生了一个天大的错误", 
+    "errorCode": 0,
+    "data":{
+         "test":123
+    }
+}

@@ -1,0 +1,1224 @@
+/* scoped by yuri 
+for index.vue
+*/
+ /* .panel{
+     margin-top: 4%;
+ } */
+ /* .panel ul li {
+    min-height: 106px;
+  } */
+  
+  .noticeWrap {
+    position: relative;
+    background: #fefced;
+    padding-left: 30px;
+    height: 30px;
+    overflow: hidden;
+  }
+  .noticeWrap:before {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(https://ssl.tuniucdn.com/img/20170406/fin/act/emergency-register/icon-notice.png)
+      center no-repeat #ff9600;
+    border-radius: 50%;
+    background-size: contain;
+    vertical-align: -3px;
+    border: 1px solid #ff9600;
+  }
+  .notice ul li a {
+    display: block;
+    color: #ff9600;
+    line-height: 30px;
+    overflow: hidden;
+  }
+  .sf-head .available p,
+  .sf-head .limit li p {
+    color: #fff;
+  }
+  .sf-head {
+    width: 100%;
+    background: url(https://ssl.tuniucdn.com/img/20161202/fin/chm/sfcf/header_bg.jpg)
+      center no-repeat;
+    background-size: cover;
+    padding: 5% 0 8%;
+    border-top: 1px solid #4b98ff;
+  }
+  .sf-head .available {
+    width: 100%;
+    margin-bottom: 1.8rem;
+    color: #fff;
+    text-align: center;
+  }
+  .sf-head .available p:first-child {
+    margin-bottom: 5px;
+    font-size: 5.2rem;
+  }
+  .sf-head .available p:nth-child(2) {
+    font-size: 2.4rem;
+  }
+  .sf-head .available p.temporary {
+    margin-top: 2px;
+    font-size: 2rem;
+    line-height: 1;
+  }
+  .sf-head .limit {
+    display: table;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .sf-head .limit li {
+    display: table-cell;
+    text-align: center;
+    width: 33.3333%;
+  }
+  .sf-head .limit li p:first-child {
+    font-size: 3.8rem;
+  }
+  .sf-head .limit li p:nth-child(2) {
+    font-size: 2.4rem;
+    height: 2rem;
+    position: relative;
+  }
+  .sf-head .limit li p:nth-child(2) .temporary {
+    display: inline-block;
+    position: absolute;
+    height: 12px;
+    font-size: 2rem;
+    line-height: 1;
+    color: #fff77a;
+    width: 12em;
+    top: 150%;
+    right: 0;
+  }
+  .panel ul:after,
+  .panel ul:before {
+    content: " ";
+    display: table;
+  }
+  .panel ul:after {
+    clear: both;
+  }
+  .panel ul li {
+    position: relative;
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+    border-right: 1px solid #f2f5f8;
+    border-top: 1px solid #f2f5f8;
+    background-color: #fff;
+  }
+  .panel ul li .item {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .panel ul li:nth-child(3n + 3) {
+    border-right: 0;
+  }
+  .panel ul li > a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 12% 0;
+  }
+  .panel ul li > a:active,
+  .panel ul li > a:focus {
+    background-color: #f2f5f8;
+  }
+  .panel ul li .icon {
+    width: 20%;
+    margin: 0 auto 8px;
+  }
+  .panel ul li .icon img {
+    width: 100%;
+  }
+  .panel ul li p {
+    line-height: 1;
+    font-size: 2.2rem;
+  }
+  .panel ul li p:first-child {
+    color: #666;
+    margin-bottom: 5px;
+  }
+  .panel ul li p:last-child {
+    color: #999;
+  }
+
+
+
+  /* list.vue and detail.vue 
+    https://ssl.tuniucdn.com/s/2016122801/jinrong/baitiao/mNxh/mNxh_css.css
+  */
+
+
+.all {
+    margin: 0 auto;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    max-width: 750px;
+    min-width: 320px;
+    width: 100%;
+    overflow: hidden
+}
+
+.threeColor {
+    color: #333
+}
+
+.sixColor {
+    color: #666
+}
+
+.nFcost_red {
+    color: #f33
+}
+
+.nineColor {
+    color: #999
+}
+
+.ff6666_back {
+    background-color: #f66
+}
+
+.nFcost_head {
+    width: 100%;
+    overflow: hidden;
+    background-color: #f59909;
+    position: relative
+}
+
+.nFcost_head .nFcost_head_list {
+    padding: 20px 0;
+    color: #fff;
+    font-size: 2.2rem;
+    text-align: center;
+    position: relative;
+    z-index: 10
+}
+
+.nFcost_head .nFcost_head_list:nth-child(1) {
+    border-bottom: 1px dashed #fff
+}
+
+.nFcost_head .nFcost_head_list p:nth-child(1) {
+    font-size: 0.8rem;
+    margin-bottom: 5px
+}
+
+.nFcost_cont {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 12px;
+    border-top: 1px solid #cfcfcf;
+    background: #fff
+}
+
+.nFcost_cont li {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #cfcfcf
+}
+
+.nFcost_cont li a {
+    width: 100%;
+    overflow: hidden;
+    padding: 12px;
+    line-height: 20px;
+    display: block
+}
+
+.nFcost_cont li a span {
+    font-size: 1rem
+}
+
+.nFcost_cont li a img {
+    height: 20px;
+    float: right
+}
+
+.nFcost_cont li a span:nth-child(3) {
+    float: right;
+    margin-right: 18px
+}
+
+.nFcost_sm {
+    width: 100%;
+    height: 50px;
+    background: url(https://ssl.tuniucdn.com/img/2015070110/jinrong/baitiao/mNxh/shuimian.png);
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    background-size: 100%;
+    background-repeat: repeat-x
+}
+
+.smOne {
+    background-position: 0 0;
+    animation: shuiwen 9s infinite linear;
+    -webkit-animation: shuiwen 9s infinite linear;
+    -o-animation: shuiwen 9s infinite linear;
+    -moz-animation: shuiwen 9s infinite linear
+}
+
+.smTwo {
+    background-position: 100px 0;
+    animation: shuiwens 9s infinite linear;
+    -webkit-animation: shuiwens 9s infinite linear;
+    -o-animation: shuiwens 9s infinite linear;
+    -moz-animation: shuiwens 9s infinite linear
+}
+
+@-webkit-keyframes shuiwen {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 1200px 0
+    }
+}
+
+@-o-keyframes shuiwen {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 1200px 0
+    }
+}
+
+@-moz-keyframes shuiwen {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 1200px 0
+    }
+}
+
+@keyframes shuiwen {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 1200px 0
+    }
+}
+
+@-webkit-keyframes shuiwens {
+    0% {
+        background-position: 100px 0
+    }
+
+    100% {
+        background-position: 1300px 0
+    }
+}
+
+@-o-keyframes shuiwens {
+    0% {
+        background-position: 100px 0
+    }
+
+    100% {
+        background-position: 1300px 0
+    }
+}
+
+@-moz-keyframes shuiwens {
+    0% {
+        background-position: 100px 0
+    }
+
+    100% {
+        -background-position: 1300px 0
+    }
+}
+
+@keyframes shuiwens {
+    0% {
+        background-position: 100px 0
+    }
+
+    100% {
+        background-position: 1300px 0
+    }
+}
+
+.nFcost_suc_top {
+    width: 100%;
+    display: block
+}
+
+.nFcost_suc {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 1px dashed #cfcfcf;
+    padding: 15px 0
+}
+
+.nFcost_suc p {
+    font-size: 1rem
+}
+
+.nFcost_suc p:nth-child(1) {
+    margin-bottom: 5px
+}
+
+.nFcost_suc p span {
+    font-size: 1.4rem
+}
+
+.nFcostK_p {
+    text-align: center;
+    font-size: 1rem;
+    font-family: fangzheng;
+    padding: 12px 0
+}
+
+@font-face {
+    font-family: fangzheng;
+    src: url(https://ssl.tuniucdn.com/img/2015070110/jinrong/baitiao/fonts/fangzheng.ttf)
+}
+
+.my_nFcost {
+    width: 100%;
+    overflow: hidden;
+    padding: 5% 12px 0
+}
+
+.my_nFcost a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 2.2rem;
+    text-align: center;
+    border-radius: 3px
+}
+
+.red_back {
+    background-color: #ff3636
+}
+
+.org_back {
+    background-color: #ff8a00
+}
+
+.green_back {
+    background-color: #33bd61
+}
+
+.cheng_back {
+    background-color: #fe8606
+}
+
+.header {
+    width: 100%;
+    overflow: hidden;
+    padding: 55px 0;
+    text-align: center;
+    font-size: 1.6rem;
+    background: url("https://ssl.tuniucdn.com/img/20150810/jinrong/baitiao/mNxh/xianEbg.jpg") no-repeat center;
+    color: #fff;
+    height: 169px
+}
+
+.header p:nth-child(1) {
+    font-size: 1.1rem;
+    margin-bottom: 8px
+}
+
+.header p:nth-child(2) {
+    font-size: 1.8rem
+}
+
+.explan {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    display: block;
+    border: 1px solid #fa3;
+    line-height: 1.5;
+    font-size: 1rem
+}
+
+.private {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #fff;
+    padding: 33px 15%
+}
+
+.nFcost_pra {
+    width: 50%;
+    margin: 10px auto;
+    display: block
+}
+
+.reading {
+    text-align: center;
+    font-size: 0.8rem
+}
+
+.reading a {
+    color: #f59909
+}
+
+.assistant {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff
+}
+
+.assistant li {
+    width: 100%;
+    overflow: hidden;
+    font-size: 1rem
+}
+
+.assistant li header {
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px dashed #cfcfcf;
+    line-height: 20px
+}
+
+.assistant li header b {
+    width: 4px;
+    height: 20px;
+    float: left;
+    margin-right: 8px;
+    display: block
+}
+
+.triangle {
+    width: 40px;
+    height: 20px;
+    float: right;
+    position: relative;
+    top: 10px
+}
+
+.triangle a {
+    display: block;
+    width: 15px;
+    height: 1px;
+    background-color: #ccc;
+    transition: all 0.5s;
+    position: absolute
+}
+
+.triangle a:nth-child(1) {
+    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg)
+}
+
+.triangle a:nth-child(2) {
+    transform: rotate(-40deg);
+    -webkit-transform: rotate(-40deg);
+    left: 11px
+}
+
+.assistant li p {
+    display: block;
+    width: 100%;
+    line-height: 1.5;
+    font-size: 0.8rem;
+    text-align: justify;
+    text-indent: 1rem;
+    padding: 12px;
+    border-bottom: 1px dashed #cfcfcf
+}
+
+.record {
+    width: 100%;
+    overflow: hidden;
+    padding: 18px 12px;
+    background-color: #f59909;
+    color: #fff;
+    font-size: 2.2rem
+}
+
+.record p:nth-child(2) {
+    margin-bottom: 8px
+}
+
+.record p:nth-child(1) {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.record p span:nth-child(2) {
+    float: right
+}
+
+.purchase {
+    width: 100%;
+    overflow: hidden;
+    padding: 4%;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 10px
+}
+
+.purchase p {
+    display: block;
+    width: 25%;
+    float: left;
+    overflow: hidden;
+    font-size: 2.2rem
+}
+
+.purchase p span {
+    display: block;
+    width: 100%;
+    overflow: hidden
+}
+
+.purchase p:nth-child(1) {
+    text-align: left;
+    width: 35%
+}
+
+.purchase p:nth-child(2) {
+    width: 15%
+}
+
+.purchase p span:nth-child(1) {
+    margin-bottom: 8px
+}
+
+.purchase p:nth-child(4) {
+    text-align: right
+}
+
+.combinde {
+    width: 100%;
+    overflow: hidden;
+    padding: 12px;
+    background-color: #fff;
+    font-size: 2.2rem
+}
+
+.combinde span:nth-child(1) {
+    float: left
+}
+
+.combinde span:nth-child(2) {
+    float: right
+}
+
+.reCheck {
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid #cfcfcf;
+    background-color: #fff;
+    margin-bottom: 45px
+}
+
+.reCheck li {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #cfcfcf;
+    padding: 12px;
+    font-size: 2.2rem;
+    line-height: 17px
+}
+
+.checkRadio {
+    width: 27px;
+    height: 27px;
+    border-radius: 100%;
+    float: left;
+    color: #fff;
+    text-align: center;
+    line-height: 17px;
+    font-size: 0.7rem;
+    border: 1px solid #c0c0c0;
+    position: relative
+}
+
+.checkRadio2 {
+    width: 17px;
+    height: 17px;
+    border-radius: 100%;
+    float: left;
+    color: #fff;
+    text-align: center;
+    line-height: 17px;
+    font-size: 0.7rem;
+    border: 1px solid #c0c0c0;
+    position: relative;
+    margin-right: 2%
+}
+
+/* todo remove */
+.gantan {
+    height: 17px;
+    float: right
+}
+.gantanpro {
+    height: 17px;   
+}
+
+.reCheck li span:nth-child(4) {
+    float: right;
+    margin-right: 8px
+}
+
+.checkRadio input,.checkRadio2 input {
+    display: none
+}
+
+.checkRadio label {
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 10
+}
+
+.checkRadio2 label {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 10
+}
+
+.checkRadio2 input:checked+label {
+    background: url(https://ssl.tuniucdn.com/img/2015070110/jinrong/baitiao/mNxh/gou.png) no-repeat;
+    background-size: cover
+}
+
+.checkRadio input:checked+label {
+    background: url(https://ssl.tuniucdn.com/img/20150806/jinrong/baitiao/mNxh/selectIco.png) no-repeat;
+    background-size: cover
+}
+
+.foot {
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    background-color: #fff;
+    border-top: 1px solid #cfcfcf;
+    line-height: 44px
+}
+
+.foot a {
+    display: block;
+    width: 40%;
+    height: 100%;
+    background-color: #ff3636;
+    color: #fff;
+    text-align: center;
+    line-height: 44px;
+    font-size: 2.4rem;
+    float: right
+}
+
+.foot .earlyPay {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #ff3636;
+    color: #fff;
+    text-align: center;
+    line-height: 44px;
+    font-size: 2.2rem;
+    float: none
+}
+
+.foot a.grayBtn {
+    background: #d0d0d0
+}
+
+.checkBox {
+    width: 27px;
+    height: 27px;
+    float: left;
+    border: 1px solid #c0c0c0;
+    border-radius: 100%;
+    margin: 8px 8px 0 12px;
+    position: relative
+}
+
+.checkBox input {
+    display: none
+}
+
+.checkBox label {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    z-index: 20;
+    width: 27px;
+    height: 27px
+}
+
+.checkBox input:checked+label {
+    background: url(https://ssl.tuniucdn.com/img/20150806/jinrong/baitiao/mNxh/selectIco.png) no-repeat;
+    background-size: cover
+}
+
+.purchase .nFcost_red {
+    font-size: 2.2rem
+}
+
+.purchase em {
+    font-style: normal
+}
+
+.p_module {
+    border-bottom: 1px solid #cfcfcf;
+    text-align: left;
+    padding-bottom: 2%
+}
+
+.p_module input {
+    height: 40px;
+    margin-top: 20px;
+    border: 1px solid #cfcfcf;
+    font-size: 0.9rem;
+    padding: 0 5px;
+    width: 65%
+}
+
+.p_module:last-child {
+    border: none;
+    padding: 0
+}
+
+/* .pop_up {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0 12px
+}
+
+.pop_up_back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-color: #000;
+    opacity: 0.3
+}
+
+.pop_up_cont {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 20%;
+    background-color: #f9f9f9;
+    font-size: 1rem
+}
+
+.pop_up_cont header {
+    width: 100%;
+    overflow: hidden;
+    background-color: #eee;
+    color: #fe8606;
+    padding: 12px
+}
+
+.pop_up_cont header span:nth-child(2) {
+    float: right
+}
+
+.pop_upc_cont {
+    width: 100%;
+    overflow: hidden;
+    padding: 12px;
+    border-bottom: 1px solid #ccc
+}
+
+.pop_upc_cont p {
+    margin-bottom: 5px
+}
+
+.pop_upc_cont p:nth-child(3) {
+    margin-bottom: 0!important
+} */
+
+.button {
+    width: 100%;
+    overflow: hidden;
+    padding: 12px;
+    text-align: center
+}
+
+.bill {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 2.2rem
+}
+
+.bill li {
+    width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid #cfcfcf;
+    padding: 10px
+}
+
+.bill li p:nth-child(3) {
+    font-size: 2rem;
+    margin-bottom: 0!important
+}
+
+.bill li p:nth-child(2) {
+    font-size: 2.2rem;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    line-height: 30px
+}
+
+.bill li p {
+    margin-bottom: 5px
+}
+
+.bill li p:nth-child(2) span:last-child {
+    float: right;
+    font-size: 2rem
+}
+
+.bill li p:nth-child(2) span:nth-child(2) {
+    margin-left: 10px
+}
+
+.bill li p:nth-child(2) span:nth-child(4) {
+    font-size: 2rem;
+    float: right;
+    margin-right: 8px;
+    display: block;
+    /* width: 95px; */
+    overflow: hidden;
+    text-align: left
+}
+
+.bill li p:nth-child(2) img {
+    height: 30px;
+    float: right
+}
+
+.bill li p:nth-child(1) {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.myhb_ts {
+    height: 40px;
+    line-height: 40px;
+    background: #ffbc2b;
+    color: #ff3600;
+    font-size: 0.8rem;
+    display: none
+}
+
+.myhb_ts a {
+    color: #ff3600;
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.myhb_ts a img {
+    vertical-align: top;
+    margin: 10px 5px 0px
+}
+
+.myhb_ts a span {
+    width: 92%;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    margin-left: 5px
+}
+
+.foot_img {
+    width: 100%;
+    padding: 0 12px
+}
+
+.foot_img img {
+    width: 100%
+}
+
+.foot_img .img_sf,.foot_img .img_jml {
+    width: 49%
+}
+
+.cash {
+    padding: 5px 12px;
+    width: 100%;
+    line-height: 25px
+}
+
+.cash span {
+    color: #b41501;
+    font-size: 0.9rem;
+    font-family: "microsoft yahei",sans-serif;
+    padding-left: 25px;
+    background: url("https://ssl.tuniucdn.com/img/20160302/jinrong/shoufuyou/M/redpacket.png") no-repeat left top;
+    background-size: contain;
+    margin-right: 0;
+    vertical-align: bottom
+}
+
+.cash a {
+    text-decoration: underline;
+    color: #444;
+    font-family: "microsoft yahei",sans-serif;
+    font-size: 0.75rem
+}
+
+.nFcost_cont {
+    margin-top: 0
+}
+
+/* .modal {
+    display: none;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 0;
+    overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch
+}
+
+.modal.modal-show {
+    display: block
+}
+
+.modal .modal-dialog {
+    position: relative;
+    margin: 10% auto;
+    *top: 10%;
+    width: 90%;
+    background-color: #FFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px
+}
+
+.modal .modal-dialog.dialog-success .dialog-message {
+    color: #3c763d
+}
+
+.modal .modal-dialog.dialog-warning .dialog-message {
+    color: #8a6d3b
+}
+
+.modal .modal-dialog.dialog-error .dialog-message {
+    color: #a94442
+}
+
+.modal .dialog-body {
+    overflow: hidden;
+    padding: 15px;
+    min-height: 50px;
+    line-height: 20px;
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+.modal .dialog-body .dialog-message {
+    text-align: justify;
+    font-size: 14px
+}
+
+.modal .dialog-header {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.modal .dialog-header {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #e0e0e0;
+    height: 40px;
+    padding-right: 20%;
+    line-height: 40px;
+    font-size: 100%
+}
+
+.hair-lines .modal .dialog-header {
+    border-bottom: .5px solid #e0e0e0
+}
+
+.modal .dialog-footer {
+    display: table;
+    overflow: hidden;
+    border-top: 1px solid #e0e0e0;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 0
+}
+
+.hair-lines .modal .dialog-footer {
+    border-top: .5px solid #e0e0e0
+}
+
+.modal .dialog-footer.btn-group .btn-cancel, .modal .dialog-footer.btn-group .btn-confirm {
+    margin: 0 -1px;
+    border-left: 1px solid #e0e0e0
+}
+
+.hair-lines .modal .dialog-footer.btn-group .btn-cancel, .hair-lines .modal .dialog-footer.btn-group .btn-confirm {
+    border-left: .5px solid #e0e0e0
+}
+
+.modal .dialog-footer.btn-group div:first-child {
+    border: none
+}
+
+.modal .dialog-footer .btn-cancel, .modal .dialog-footer .btn-confirm {
+    display: table-cell;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center
+}
+
+.modal .dialog-footer .btn-cancel a, .modal .dialog-footer .btn-confirm a {
+    display: block
+}
+
+.modal .dialog-footer .btn-cancel {
+    color: #666
+}
+
+.modal .dialog-footer .btn-cancel+.btn-confirm {
+    width: 50%
+}
+
+.modal .dialog-footer .btn-cancel a {
+    color: #666
+}
+
+.modal .dialog-footer .btn-confirm {
+    color: #17a5ff
+}
+
+.modal .dialog-footer .btn-confirm+.btn-cancel {
+    width: 50%
+}
+
+.modal .dialog-footer .btn-confirm a {
+    color: #17a5ff
+}
+
+.modal .btn-close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    font: bold 14px/20px 'Arial';
+    color: #999;
+    text-decoration: none;
+    z-index: 9;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px
+}
+
+.modal .modal-dialog {
+    width: 85%;
+    margin: 0 auto;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.modal .dialog-footer .btn-confirm {
+    color: #1fbad6
+} */
+
+
+
+
+
+/*以下样式 用于实现浮动盖起*/
+/* .sf-head {
+    position: relative;
+}
+.sf-head .limit {
+    display: table;
+    width: 80%;
+    background-color: #ff0000;
+    position: absolute;
+    left: 10%;
+    bottom: -20px;
+    z-index: 1;
+} */
+
+.fakeloader{
+    display: table;
+    margin: 0 auto;
+}
+.foot .UnselectButton{
+    background-color: #dadada !important
+}
