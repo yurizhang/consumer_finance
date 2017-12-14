@@ -1,6 +1,6 @@
 <template>
 <div>
-    <van-nav-bar title="我的首付出发" leftArrow fixed leftText="返回" class="fixed-van-nav-bar"  @click-left="backIndex()"></van-nav-bar>
+    <van-nav-bar title="我的账单" leftArrow fixed leftText="返回" class="fixed-van-nav-bar"  @click-left="backIndex()"></van-nav-bar>
     <div class="all all_title">
         <header class="record">            
             <p>{{billDetail.productName}}</p>
@@ -155,7 +155,7 @@ const origin_result=[];   //用于缓存当前所有的列表id
             }
             this.id_result=_newArrar;
             this.computePrice();
-            console.log(i,id, this.id_result)
+            //console.log(i,id, this.id_result)
         },
         AllofSelect(){
                 if(document.getElementById("checkbox").checked){ //全选反选按钮 

@@ -5,11 +5,11 @@
     <div class="form-table add-bank-card" v-if="oneStep">
         <div class="form-line">
             <label class="form-label">持卡人姓名</label>
-            <p class="form-input">*磊</p>
+            <p class="form-input">{{name}}</p>
         </div>
         <div class="form-line">
             <label class="form-label">身份证号</label>
-            <p class="form-input">3****************3</p>
+            <p class="form-input">{{idNo}}</p>
         </div>
         <div class="form-line">
             <label class="form-label">银行卡号</label>
@@ -17,8 +17,9 @@
                 <van-field
                     v-model="cardNo"                   
                     id="cardNo"
-                    type="number"
-                    icon="clear"
+                    ref="cardNo"               
+                    type="text" 
+                    icon="clear" 
                     placeholder="请输入支持银行卡号"
                     required
                     @click-icon="cardNo = ''"
@@ -31,8 +32,13 @@
 
     </div>
 
+    <template v-if="twoStep">
+    <div class="bank-box" v-if="bankinfo.iconType">
+        <span class="bank-icon" :class="bankinfo.iconType"></span>
+        <span class="bank-name">{{bankinfo.name}}<i>({{bankinfo.type}})</i></span>
+    </div>
 
-    <div class="form-table" v-if="twoStep">
+    <div class="form-table">
         <div class="form-line">
             <label class="form-label">预留手机号</label>
             <p class="form-input">               
@@ -41,6 +47,7 @@
                     id="phoneNumber"
                     type="number"
                     icon="clear"
+                    maxlength="11" 
                     placeholder="请输入银行预留手机号"
                     required
                     @click-icon="phoneNumber = ''"
@@ -51,11 +58,13 @@
         </div>
         <div class="form-line">
             <label class="form-label">验证码</label>
-            <p class="form-input"><input type="text" placeholder="点击获取验证码" id="verifyCode">
+            <p class="form-input"><input type="text" placeholder="点击获取验证码" maxlength="6" v-model="code">
                 <input type="button" value="获取验证码"  class="get-code">
             </p>
         </div>        
     </div>
+    </template>
+
     <a href="javascript:;" class="btn-primary" @click="controllStep()" v-if="currentStep < 3">下一步</a>
 
 
@@ -64,15 +73,12 @@
         <p class="result-info">添加成功</p>
         <a href="/xdm/m/index/main" class="btn">查看我的首付出发</a>
     </div>
-
-
     <div class="result" v-if="result_fail">
         <img src="https://ssl.tuniucdn.com/img/20161207/fin/chm/sfcf/result_fail.png">
         <p class="result-info">
             <span>出错啦</span><br>
             <span class="jump-info">点击返回，再试一次</span>
         </p>
-
         <a href="/xdm/m/card/cardManage" class="btn">返回</a>
     </div>
 
@@ -116,9 +122,16 @@ export default {
   name: "addBank",
   data(){
       return {
-          cardNo:'',
+          cardNo:'', //银行卡号
+          name:'*三',
+          idNo:'320*************11',
           phoneNumber:'12345',
-          
+          code:'1234',
+
+
+          bankinfo:{
+
+          },  //第二步的银行信息
           
           //以下控制 
           currentStep:1, //表示当前第几步
@@ -149,26 +162,80 @@ export default {
           });
 
     },
-    controllStep(){
-        console.log(this.currentStep);
+    async controllStep(){
+        //console.log(this.currentStep);
 
         if(this.currentStep==1){
             //当前在第一步，跳到第二步
             //js验证
-            this.oneStep=false;
-            this.twoStep=true;
+            if(this.cardNo.length<8){
+                Dialog.alert({message:"错误的银行卡号."}).then(()=>{                     
+                     //document.querySelector("#cardNo").focus();                     
+                     //const input = this.$refs['cardNo'].focus();
+                     //console.log(this.$refs['cardNo']);
+                     
+                });
+                return;
+            }
+            
+            this.oneStep=false;            
             this.currentStep=2;
+            //得到银行卡号
+            //ajax显示一下
+            this.twoStep=true; //进入第二步
+            this.bankinfo= await this.getBankinfo(this.cardNo);
+            console.log(this.bankinfo);
+            
+
         }else if(this.currentStep==2){
             //当前在第2步，跳到第3步 显示成功或是失败
             //js验证
+            //手机号或是验证码
+            let request={
+                    cardNo:'', //银行卡号
+                    name:'*三',
+                    idNo:'320*************11',
+                    phoneNumber:'12345',
+                    code:'1234',
+            }
+            if(this.code==""){
+                 Dialog.alert({message:"请输入验证码."}).
+                 return;
+            }
+            
+            
             //ajax
-            this.twoStep=false;            
-            this.result_success=true;
-            //this.result_fail=false;
-
+            this.twoStep=false;  //关闭第二步        
             this.currentStep=3;
+
+            //ajax 显示成功或是失败
+            this.result_success=true;
+            //this.result_fail=true;
         }
 
+    },
+    async getBankinfo(bankNo){
+        //根据银行卡号得到这个信息的基本信息ajax
+        //let res={};
+        let p=new Promise((resolve,reject)=>{
+            setTimeout(() => {    
+                resolve({                 
+                    "id":1,
+                    "iconType": "CMB",
+                    "name": "招商银行",
+                    "type": "储蓄卡",
+                    "cardNo": bankNo,
+                    "icon": ""      
+                })
+            }, 1000);
+             
+        });
+        return await p.then((res)=>{
+           // console.log(res);
+            return res;  //return出当前层
+        })
+        
+        
     }
   }
 

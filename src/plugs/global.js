@@ -19,12 +19,23 @@ export let _PRODUCT=window["SMALL_BLACK_CONFIG"]._PRODUCT;  //DEV or PRD   //开
 URILIST[0]=DomainName+'/app/index/';  //首页 post
 _URILIST[0]='/api/index/';
 
-URILIST[1]=DomainName+'/app/list/';  //帐单 post querytype传参数
+URILIST[1]=DomainName+'/app/list/';  //帐单 post querytype=传参数
 _URILIST[1]='/api/list/';
 
-URILIST[2]=DomainName+'/app/detail/';  //帐单 post querytype传参数
+URILIST[2]=DomainName+'/app/detail/';  //帐单 post ?id=传参数
 _URILIST[2]='/api/detail/';
 
+URILIST[3]=DomainName+'/app/coupon/';  //优惠卷 post
+_URILIST[3]='/api/coupon/';
+
+URILIST[4]=DomainName+'/app/bankCardList/';  //银行卡列表post
+_URILIST[4]='/api/bankCardList/';
+
+URILIST[5]=DomainName+'/app/bankCardDel/';  //银行卡列表 delete post
+_URILIST[5]='/api/bankCardDel/';
+
+URILIST[6]=DomainName+'/app/bankCardAdd/';  //银行卡列表 Add post
+_URILIST[6]='/api/bankCardAdd/';
 
 if(_PRODUCT=='DEV'){
 	URILIST=_URILIST;

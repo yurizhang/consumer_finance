@@ -19,8 +19,25 @@ apiRoutes.post('/detail', function (req, res) {
   res.json(appData);
 })
 
+apiRoutes.post('/coupon', function (req, res) {
+  var appData = require('../static/data/coupon.json');
+  res.json(appData);
+})
 
+apiRoutes.post('/bankCardList', function (req, res) {
+  var appData = require('../static/data/bankcardlist.json');
+  res.json(appData);
+})
 
+apiRoutes.post('/bankCardAdd', function (req, res) {
+  var appData = require('../static/data/common.json');
+  res.json(appData);
+})
+
+apiRoutes.post('/bankCardDel', function (req, res) {
+  var appData = require('../static/data/common.json');
+  res.json(appData);
+})
 
 module.exports = apiRoutes;
 // 调用api

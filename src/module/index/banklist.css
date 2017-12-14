@@ -89,7 +89,7 @@ a,button,input {
     display: inline-block;
     padding: 2.5% 0;
     line-height: 20px;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     vertical-align: middle
 }
 
@@ -425,9 +425,33 @@ a,button,input {
 }
 
 .bank-box {
+    position: relative;
     background-color: #fff;
     padding: 6% 5%;
     margin: 4% 0 3%
+}
+
+
+.bank-box .bank-icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 12%;
+    padding-top: 12%
+}
+
+.bank-box .bank-name {
+    padding-left: 16%
+}
+
+.bank-box .bank-name i {
+    font-size: .8rem;
+    vertical-align: baseline
 }
 
 .bank-detail .bank-type {

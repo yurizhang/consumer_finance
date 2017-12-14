@@ -138,11 +138,157 @@ textarea {
   animation: van-slide-bottom-leave .3s both ease
 }
 
+.van-tabs {
+  position: relative
+}
+
+.van-tabs__wrap {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  overflow: hidden;
+  position: absolute
+}
+
+.van-tabs__wrap--page-top {
+  position: fixed
+}
+
+.van-tabs__wrap--content-bottom {
+  top: auto;
+  bottom: 0
+}
+
+.van-tabs__nav {
+  display: -webkit-box;
+  display: flex;
+  -webkit-user-select: none;
+  user-select: none;
+  position: relative;
+  background-color: #fff
+}
+
+.van-tabs__nav--line {
+  height: 100%;
+  padding-bottom: 15px;
+  box-sizing: content-box
+}
+
+.van-tabs__nav--card {
+  margin: 0 15px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  height: 30px;
+  border: 1px solid #666
+}
+
+.van-tabs__nav--card .van-tab {
+  color: #666;
+  border-right: 1px solid #666;
+  line-height: 28px
+}
+
+.van-tabs__nav--card .van-tab:last-child {
+  border-right: none
+}
+
+.van-tabs__nav--card .van-tab.van-tab--active {
+  color: #fff;
+  background-color: #666
+}
+
+.van-tabs__nav-bar {
+  z-index: 1;
+  left: 0;
+  bottom: 15px;
+  height: 2px;
+  position: absolute;
+  background-color: #f44
+}
+
+.van-tabs--scrollable .van-tab {
+  -webkit-box-flex: 0;
+  flex: 0 0 22%
+}
+
+.van-tabs--scrollable .van-tabs__nav {
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch
+}
+
+.van-tabs--scrollable .van-tabs__nav::-webkit-scrollbar {
+  display: none
+}
+
+.van-tabs--line {
+  padding-top: 44px
+}
+
+.van-tabs--line .van-tabs__wrap {
+  height: 44px
+}
+
+.van-tabs--card {
+  padding-top: 30px
+}
+
+.van-tabs--card .van-tabs__wrap {
+  height: 30px
+}
+
+.van-tab {
+  -webkit-box-flex: 1;
+  flex: 1;
+  cursor: pointer;
+  padding: 0 5px;
+  font-size: 14px;
+  position: relative;
+  color: #333;
+  line-height: 44px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #fff;
+  min-width: 0
+}
+
+.van-tab span {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis
+}
+
+.van-tab:active {
+  background-color: #e8e8e8
+}
+
+.van-tab--active {
+  color: #f44
+}
+
+.van-tab--disabled {
+  color: #c9c9c9
+}
+
+.van-tab--disabled:active {
+  background-color: #fff
+}
+
+.van-tab__pane {
+  display: none
+}
+
+.van-tab__pane--select {
+  display: block
+}
+
 @font-face {
   font-style: normal;
   font-weight: 400;
   font-family: vant-icon;
-  src: url(https://b.yzcdn.cn/zanui/icon/vant-icon-75c072da.ttf) format("truetype")
+  src: url(https://b.yzcdn.cn/zanui/icon/vant-icon-82e489.ttf) format("truetype")
 }
 
 .van-icon {
@@ -176,340 +322,356 @@ textarea {
   content: "\F004"
 }
 
-.van-icon-arrow:before {
+.van-icon-arrow-left:before {
   content: "\F005"
 }
 
-.van-icon-balance-details:before {
+.van-icon-arrow:before {
   content: "\F006"
 }
 
-.van-icon-balance-pay:before {
+.van-icon-balance-details:before {
   content: "\F007"
 }
 
-.van-icon-birthday-privilege:before {
+.van-icon-balance-pay:before {
   content: "\F008"
 }
 
-.van-icon-browsing-history:before {
+.van-icon-birthday-privilege:before {
   content: "\F009"
 }
 
-.van-icon-card:before {
+.van-icon-browsing-history:before {
   content: "\F00A"
 }
 
-.van-icon-cart:before {
+.van-icon-card:before {
   content: "\F00B"
 }
 
-.van-icon-cash-back-record:before {
+.van-icon-cart:before {
   content: "\F00C"
 }
 
-.van-icon-cash-on-deliver:before {
+.van-icon-cash-back-record:before {
   content: "\F00D"
 }
 
-.van-icon-certificate:before {
+.van-icon-cash-on-deliver:before {
   content: "\F00E"
 }
 
-.van-icon-chat:before {
+.van-icon-certificate:before {
   content: "\F00F"
 }
 
-.van-icon-check:before {
+.van-icon-chat:before {
   content: "\F010"
 }
 
-.van-icon-checked:before {
+.van-icon-check:before {
   content: "\F011"
 }
 
-.van-icon-clear:before {
+.van-icon-checked:before {
   content: "\F012"
 }
 
-.van-icon-clock:before {
+.van-icon-clear:before {
   content: "\F013"
 }
 
-.van-icon-close:before {
+.van-icon-clock:before {
   content: "\F014"
 }
 
-.van-icon-completed:before {
+.van-icon-close:before {
   content: "\F015"
 }
 
-.van-icon-contact:before {
+.van-icon-completed:before {
   content: "\F016"
 }
 
-.van-icon-coupon:before {
+.van-icon-contact:before {
   content: "\F017"
 }
 
-.van-icon-credit-pay:before {
+.van-icon-coupon:before {
   content: "\F018"
 }
 
-.van-icon-debit-pay:before {
+.van-icon-credit-pay:before {
   content: "\F019"
 }
 
-.van-icon-delete:before {
+.van-icon-debit-pay:before {
   content: "\F01A"
 }
 
-.van-icon-description:before {
+.van-icon-delete:before {
   content: "\F01B"
 }
 
-.van-icon-discount:before {
+.van-icon-description:before {
   content: "\F01C"
 }
 
-.van-icon-ecard-pay:before {
+.van-icon-discount:before {
   content: "\F01D"
 }
 
-.van-icon-edit-data:before {
+.van-icon-ecard-pay:before {
   content: "\F01E"
 }
 
-.van-icon-edit:before {
+.van-icon-edit-data:before {
   content: "\F01F"
 }
 
-.van-icon-exchange-record:before {
+.van-icon-edit:before {
   content: "\F020"
 }
 
-.van-icon-exchange:before {
+.van-icon-exchange-record:before {
   content: "\F021"
 }
 
-.van-icon-fail:before {
+.van-icon-exchange:before {
   content: "\F022"
 }
 
-.van-icon-free-postage:before {
+.van-icon-fail:before {
   content: "\F023"
 }
 
-.van-icon-gift-card-pay:before {
+.van-icon-free-postage:before {
   content: "\F024"
 }
 
-.van-icon-gift-card:before {
+.van-icon-gift-card-pay:before {
   content: "\F025"
 }
 
-.van-icon-gift:before {
+.van-icon-gift-card:before {
   content: "\F026"
 }
 
-.van-icon-gold-coin:before {
+.van-icon-gift:before {
   content: "\F027"
 }
 
-.van-icon-goods-collect:before {
+.van-icon-gold-coin:before {
   content: "\F028"
 }
 
-.van-icon-home:before {
+.van-icon-goods-collect:before {
   content: "\F029"
 }
 
-.van-icon-hot-sale:before {
+.van-icon-home:before {
   content: "\F02A"
 }
 
-.van-icon-hot:before {
+.van-icon-hot-sale:before {
   content: "\F02B"
 }
 
-.van-icon-like-o:before {
+.van-icon-hot:before {
   content: "\F02C"
 }
 
-.van-icon-like:before {
+.van-icon-like-o:before {
   content: "\F02D"
 }
 
-.van-icon-location:before {
+.van-icon-like:before {
   content: "\F02E"
 }
 
-.van-icon-logistics:before {
+.van-icon-location:before {
   content: "\F02F"
 }
 
-.van-icon-member-day-privilege:before {
+.van-icon-logistics:before {
   content: "\F030"
 }
 
-.van-icon-new-arrival:before {
+.van-icon-member-day-privilege:before {
   content: "\F031"
 }
 
-.van-icon-new:before {
+.van-icon-more-o:before {
   content: "\F032"
 }
 
-.van-icon-other-pay:before {
+.van-icon-more:before {
   content: "\F033"
 }
 
-.van-icon-passed:before {
+.van-icon-new-arrival:before {
   content: "\F034"
 }
 
-.van-icon-password-not-view:before {
+.van-icon-new:before {
   content: "\F035"
 }
 
-.van-icon-password-view:before {
+.van-icon-other-pay:before {
   content: "\F036"
 }
 
-.van-icon-pause:before {
+.van-icon-passed:before {
   content: "\F037"
 }
 
-.van-icon-peer-pay:before {
+.van-icon-password-not-view:before {
   content: "\F038"
 }
 
-.van-icon-pending-deliver:before {
+.van-icon-password-view:before {
   content: "\F039"
 }
 
-.van-icon-pending-evaluate:before {
+.van-icon-pause:before {
   content: "\F03A"
 }
 
-.van-icon-pending-orders:before {
+.van-icon-peer-pay:before {
   content: "\F03B"
 }
 
-.van-icon-pending-payment:before {
+.van-icon-pending-deliver:before {
   content: "\F03C"
 }
 
-.van-icon-phone:before {
+.van-icon-pending-evaluate:before {
   content: "\F03D"
 }
 
-.van-icon-photo:before {
+.van-icon-pending-orders:before {
   content: "\F03E"
 }
 
-.van-icon-photograph:before {
+.van-icon-pending-payment:before {
   content: "\F03F"
 }
 
-.van-icon-play:before {
+.van-icon-phone:before {
   content: "\F040"
 }
 
-.van-icon-point-gift:before {
+.van-icon-photo:before {
   content: "\F041"
 }
 
-.van-icon-points-mall:before {
+.van-icon-photograph:before {
   content: "\F042"
 }
 
-.van-icon-points:before {
+.van-icon-play:before {
   content: "\F043"
 }
 
-.van-icon-qr-invalid:before {
+.van-icon-point-gift:before {
   content: "\F044"
 }
 
-.van-icon-qr:before {
+.van-icon-points-mall:before {
   content: "\F045"
 }
 
-.van-icon-question:before {
+.van-icon-points:before {
   content: "\F046"
 }
 
-.van-icon-receive-gift:before {
+.van-icon-qr-invalid:before {
   content: "\F047"
 }
 
-.van-icon-records:before {
+.van-icon-qr:before {
   content: "\F048"
 }
 
-.van-icon-search:before {
+.van-icon-question:before {
   content: "\F049"
 }
 
-.van-icon-send-gift:before {
+.van-icon-receive-gift:before {
   content: "\F04A"
 }
 
-.van-icon-setting:before {
+.van-icon-records:before {
   content: "\F04B"
 }
 
-.van-icon-shop-collect:before {
+.van-icon-search:before {
   content: "\F04C"
 }
 
-.van-icon-shop:before {
+.van-icon-send-gift:before {
   content: "\F04D"
 }
 
-.van-icon-shopping-cart:before {
+.van-icon-setting:before {
   content: "\F04E"
 }
 
-.van-icon-sign:before {
+.van-icon-share:before {
   content: "\F04F"
 }
 
-.van-icon-stop:before {
+.van-icon-shop-collect:before {
   content: "\F050"
 }
 
-.van-icon-success:before {
+.van-icon-shop:before {
   content: "\F051"
 }
 
-.van-icon-tosend:before {
+.van-icon-shopping-cart:before {
   content: "\F052"
 }
 
-.van-icon-underway:before {
+.van-icon-sign:before {
   content: "\F053"
 }
 
-.van-icon-upgrade:before {
+.van-icon-stop:before {
   content: "\F054"
 }
 
-.van-icon-value-card:before {
+.van-icon-success:before {
   content: "\F055"
 }
 
-.van-icon-wap-home:before {
+.van-icon-tosend:before {
   content: "\F056"
 }
 
-.van-icon-wap-nav:before {
+.van-icon-underway:before {
   content: "\F057"
 }
 
-.van-icon-wechat:before {
+.van-icon-upgrade:before {
   content: "\F058"
+}
+
+.van-icon-value-card:before {
+  content: "\F059"
+}
+
+.van-icon-wap-home:before {
+  content: "\F05A"
+}
+
+.van-icon-wap-nav:before {
+  content: "\F05B"
+}
+
+.van-icon-wechat:before {
+  content: "\F05C"
 }
 
 .van-cell {
@@ -592,7 +754,9 @@ textarea {
 }
 
 .van-checkbox {
-  overflow: hidden
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none
 }
 
 .van-checkbox .van-icon-success {
@@ -648,13 +812,14 @@ textarea {
 }
 
 .van-checkbox--disabled .van-icon-success {
-  border-color: #d1dbe5;
-  background-color: transparent
+  color: #f8f8f8;
+  border-color: #e5e5e5;
+  background-color: currentColor
 }
 
 .van-checkbox--disabled .van-checkbox__control:checked+.van-icon-success {
-  border-color: #d1dbe5;
-  background-color: #d1dbe5
+  border-color: #e5e5e5;
+  background-color: #e5e5e5
 }
 
 @-webkit-keyframes van-loading {
@@ -975,6 +1140,10 @@ textarea {
   resize: none
 }
 
+.van-field__control[disabled] {
+  background-color: transparent
+}
+
 .van-field__icon {
   position: absolute;
   right: 0;
@@ -1028,7 +1197,7 @@ textarea {
 .van-button--default {
   color: #333;
   background-color: #fff;
-  border: 1px solid #ccc
+  border: 1px solid #e5e5e5
 }
 
 .van-button--primary {
@@ -1100,7 +1269,7 @@ textarea {
 .van-button--disabled {
   color: #999;
   background-color: #e5e5e5;
-  border: 1px solid #cacaca
+  border: 1px solid #ccc
 }
 
 .van-modal {
@@ -1918,6 +2087,10 @@ select {
   overflow: hidden
 }
 
+.all_title {
+  margin-top: 46px
+}
+
 .threeColor {
   color: #333
 }
@@ -2535,15 +2708,15 @@ select {
 }
 
 .bill {
-  background-color: #fff;
   font-size: 2.2rem
 }
 
 .bill li {
   width: 100%;
   overflow: hidden;
-  border-bottom: 1px solid #cfcfcf;
-  padding: 10px
+  padding: 10px;
+  background-color: #fff;
+  margin: 5px 0
 }
 
 .bill li p:nth-child(3) {
@@ -2818,9 +2991,8 @@ select {
 .form-table .form-line .support {
   position: absolute;
   right: 5%;
-  bottom: -70%;
   color: #2aaeff;
-  font-size: .8rem
+  font-size: 12px
 }
 
 .form-table .form-line+.form-line .form-input {
@@ -3151,36 +3323,6 @@ select {
   font-size: 1.8rem
 }
 
-nav {
-  background-color: #fff;
-  padding: 3% 5%
-}
-
-nav ul {
-  display: table;
-  width: 100%
-}
-
-nav ul li {
-  display: table-cell;
-  text-align: center
-}
-
-nav ul li a {
-  display: inline-block;
-  text-align: center;
-  color: #aaa;
-  border-radius: 30px;
-  width: 9.29rem;
-  height: 2.07rem;
-  line-height: 2.07rem
-}
-
-nav ul li.active a {
-  background: #2aaeff;
-  color: #fff
-}
-
 .ticket-list .ticket-item.inactive .ticket-content .detail .orientation,
 .ticket-list .ticket-item.inactive .ticket-content .link .to-use {
   color: #aaa
@@ -3189,14 +3331,6 @@ nav ul li.active a {
 .ticket-list {
   width: 90%;
   margin: 0 auto
-}
-
-.ticket-list ul {
-  display: none
-}
-
-.ticket-list ul.cur-ticket-list {
-  display: block
 }
 
 .ticket-list .ticket-item {
@@ -3346,4 +3480,15 @@ nav ul li.active a {
 .van-cell-group-refine {
   padding-left: 10px;
   background-color: transparent!important
+}
+
+.fixed-van-nav-bar {
+  z-index: 1000
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: vant-icon;
+  src: url(../static/fonts/vant-icon-82e489.82e4896.ttf) format("truetype")
 }

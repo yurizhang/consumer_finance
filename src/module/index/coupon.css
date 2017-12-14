@@ -1,32 +1,4 @@
-nav {
-    background-color: #fff;
-    padding: 3% 5%
-}
 
-nav ul {
-    display: table;
-    width: 100%
-}
-
-nav ul li {
-    display: table-cell;
-    text-align: center
-}
-
-nav ul li a {
-    display: inline-block;
-    text-align: center;
-    color: #AAA;
-    border-radius: 30px;
-    width: 9.29rem;
-    height: 2.07rem;
-    line-height: 2.07rem
-}
-
-nav ul li.active a {
-    background: #2AAEFF;
-    color: #fff
-}
 
 .ticket-list .ticket-item.inactive .ticket-content .detail .orientation,.ticket-list .ticket-item.inactive .ticket-content .link .to-use {
     color: #aaa
@@ -37,13 +9,13 @@ nav ul li.active a {
     margin: 0 auto
 }
 
-.ticket-list ul {
+/* .ticket-list ul {
     display: none
 }
 
 .ticket-list ul.cur-ticket-list {
     display: block
-}
+} */
 
 .ticket-list .ticket-item {
     margin-top: 2.5%
@@ -148,12 +120,15 @@ nav ul li.active a {
     color: #999;
     font-size: .86rem;
     text-align: justify;
-    opacity: 0;
+   
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out
+}
+.ticket-list .ticket-item .ticket-content .displayBlock{
+    display: block
 }
 
 .ticket-list .ticket-item .ticket-content .rules.show {

@@ -1,6 +1,6 @@
 <template>
 <div>
-	<van-nav-bar title="我的首付出发" leftArrow leftText="返回"  @click-left="backIndex()"></van-nav-bar>
+	<van-nav-bar title="我的账单" leftArrow leftText="返回"  @click-left="backIndex()"></van-nav-bar>
       <!-- <van-button type="primary" @click="sayYes()">Primary</van-button> -->
       <!-- <input id="top_bar_title" type="hidden" value="首付出发账单"> -->
       <!-- 这个 top_bar_title 有可能是APP读取的时候用的-->
@@ -83,7 +83,6 @@ export default {
 				//console.log(result); // 收到 ‘ok’   
 				//console.log("ending"); // 收到 ‘ok’
 				
-
 	},
 	ajaxDate(querytype) {
 		//return new Promise((resolve, reject)=> {

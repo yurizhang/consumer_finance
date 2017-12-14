@@ -1,0 +1,48 @@
+{
+    "success": true,
+    "msg": null,
+    "errorCode": 1,
+    "desc": "优惠卷列表",
+    "list": [
+        {
+            "type": 0,
+            "name": "免息卷",
+            "subName": "3期免息券1",
+            "availablePeriod": "6期、12期、18期、24期",
+            "beginValidity": "2017-11-27 15:03:54",
+            "endValidity": "2017-11-27 15:03:54"
+        },
+        {
+            "type": 1,
+            "name": "免息卷",
+            "subName": "3期免息券2",
+            "availablePeriod": "6期、12期、18期、24期",
+            "beginValidity": "2017-11-27 15:03:54",
+            "endValidity": "2017-11-27 15:03:54"
+        },
+        {
+            "type": 1,
+            "name": "免息卷",
+            "subName": "3期免息券3",
+            "availablePeriod": "6期、12期、18期、24期",
+            "beginValidity": "2017-11-27 15:03:54",
+            "endValidity": "2017-11-27 15:03:54"
+        },
+        {
+            "type": 1,
+            "name": "免息卷",
+            "subName": "3期免息券4",
+            "availablePeriod": "6期、12期、18期、24期",
+            "beginValidity": "2017-11-27 15:03:54",
+            "endValidity": "2017-11-27 15:03:54"
+        },
+        {
+            "type": 0,
+            "name": "免息卷",
+            "subName": "3期免息券5",
+            "availablePeriod": "6期、12期、18期、24期",
+            "beginValidity": "2017-11-27 15:03:54",
+            "endValidity": "2017-11-27 15:03:54"
+        }
+    ]
+}
