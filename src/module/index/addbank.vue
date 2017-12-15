@@ -199,10 +199,10 @@ export default {
                     code:'1234',
             }
             if(this.code==""){
-                 Dialog.alert({message:"请输入验证码."}).
+                 Dialog.alert({message:"请输入验证码."});
                  return;
             }
-            
+
             
             //ajax
             this.twoStep=false;  //关闭第二步        
