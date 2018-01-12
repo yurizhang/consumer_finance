@@ -1,0 +1,287 @@
+{
+    "success": true,
+    "msg": null,
+    "errorCode": 1,
+    "desc":"http://wiki.tuniu.org/pages/viewpage.action?pageId=81055207",
+    "data":{
+                "id": 1,    
+                "productName": "<跟团无领队打包出短王蕾专用>请勿动",
+                "orderDate": "2017-11-27",
+                "orderID": "1035645674",
+                "applyFlow": "20171127150352099",
+                "applyQuota": 2400,
+                "periods": 24,
+                "state":1,
+                "installmentCharge": 86.4,
+                "penalty": 2,
+                "totalQuota": 2488.4,
+                "needToPay": 2459.6,
+                "datalist": [
+                    {
+                        "id": 11,
+                        "currentQuota": 402,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":1,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    },
+                    {
+                        "id": 22,
+                        "currentQuota": 403,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    },
+
+                    {
+                        "id": 33,
+                        "currentQuota": 404,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 44,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 5,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 6,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 7,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 8,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 9,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 10,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 24,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 12,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 13,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 14,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 15,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 16,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 17,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 18,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 19,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 20,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 21,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+                    ,                    
+                    {
+                        "id": 23,
+                        "currentQuota": 405,
+                        "payDate": "2017-11-27",
+                        "state": 2,
+                        "currentPeriod": 1,
+                        "quota": 400,
+                        "avoid":0,
+                        "installmentCharge": 0,
+                        "penalty": 2
+                    }
+
+
+                ]
+            }          
+   
+}

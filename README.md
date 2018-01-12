@@ -1,4 +1,4 @@
-消费金融webview项目
+消费金融webview项目 类支付里借呗和花呗的结合体
 
 ``` bash
 # install dependencies
@@ -44,3 +44,8 @@ npm run build
   - components/Repayment
     - repayment_history 代你还分期详细  /module/repayment.html#/
     - repayment_detail  代你还分期记录  /module/repayment.html#/detail
+
+## 项目截图 ##
+
+
+![Image text](https://raw.githubusercontent.com/yurizhang/micro-finance-admin-system/master/src/assets/20180103162358.png)

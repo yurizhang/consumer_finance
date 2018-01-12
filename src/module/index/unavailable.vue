@@ -64,7 +64,7 @@
         </div>
         <div class="agreement">
             <p id="xieyi_agree"><i class="icon-checkbox"></i>我同意 <a href="javascript:;" class="agreement-link">《用户协议》</a></p>
-            <p id="daikou_agree" style="display:none;"><i class="icon-checkbox"></i>我同意设置该银行卡为代扣卡</p>
+            <p id="daikou_agree"><i class="icon-checkbox"></i>我同意设置该银行卡为代扣卡</p>
         </div>
 
 
