@@ -1,5 +1,9 @@
 消费金融webview项目 类支付里借呗和花呗的结合体
 
+[https://yurizhang.github.io/consumer_finance/module/index.html#/] https://yurizhang.github.io/consumer_finance/module/index.html#/
+
+支付多页面多路由开发.
+
 ``` bash
 # install dependencies
 npm install
@@ -48,4 +52,8 @@ npm run build
 ## 项目截图 ##
 
 
-![Image text](https://raw.githubusercontent.com/yurizhang/micro-finance-admin-system/master/src/assets/20180103162358.png)
+![Image text](https://raw.githubusercontent.com/yurizhang/consumer_finance/master/docs/screeshots/1.png)
+
+![Image text](https://raw.githubusercontent.com/yurizhang/consumer_finance/master/docs/screeshots/2.png)
+
+![Image text](https://raw.githubusercontent.com/yurizhang/consumer_finance/master/docs/screeshots/3.png)
