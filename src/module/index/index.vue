@@ -1,29 +1,30 @@
 <template>
 <div>
-       <div class="noticeWrap" v-if="!!data.alertMessageTitle">
-            <div class="notice" id="notice">
-                <ul>                    
-                    <li><a @click="alertMessage()">{{this.data.alertMessageTitle}}</a></li>                    
+       <div class="noticeWrap" v-if="this.data.noticeList.length>0">
+            <div class="notice">
+                <ul :class="animate? 'anim':''" :style="{top}">                    
+                    <li v-for="(item,index) in data.noticeList" :key="index"><a @click="alertMessage(index)">{{item.title}}</a></li>                                       
                 </ul>
             </div>
+            
         </div>
     
 
 
         <header class="sf-head">
             <div class="available">
-                <p>{{number_format(data.availableQuota, 2)}}</p>
+                <p>{{number_format(data.totalAvaiQuota, 2)}}</p>
                 <p>可用额度(元)</p>
             </div>
             <ul class="limit">
                 <li>
                      <router-link  class="billListHref" to="/list?queryType=2"> 
-                    <p>{{number_format(data.weekNeedToPay,2)}}</p>
+                    <p>{{number_format(data.weekAmount,2)}}</p>
                     <p>近七日待还款(元)</p>
                     </router-link>          
                 </li>
                 <li>
-                    <p>{{number_format(data.fixedQuota,2)}}</p>
+                    <p>{{number_format(data.orderQuota,2)}}</p>
                     <p>固定额度(元)</p>
                 </li>
                 
@@ -36,10 +37,10 @@
         <li>
             <router-link  class="billListHref" to="/list?queryType=2">            
                 <div class="item">
-                    <div class="icon"><img :src="userCenter_icon_3" alt="全部还款"></div>
+                    <div class="icon"><img :src="userCenter_icon_2" alt="全部还款"></div>
                     <div class="detail">
                         <p>全部待还款</p>
-                        <p>{{number_format(data.AllofNeedToPay,2)}}</p>
+                        <p>{{number_format(data.allAmount,2)}}</p>
                     </div>
 		        </div>
             
@@ -49,10 +50,10 @@
         <li>
             <router-link  to="/list?queryType=3">  
                 <div class="item">
-                    <div class="icon"><img :src="userCenter_icon_2" alt="逾期还款"></div>
+                    <div class="icon"><img :src="userCenter_icon_3" alt="逾期还款"></div>
                     <div class="detail">
                         <p>逾期还款</p>
-                        <p>{{number_format(data.overdueNeedToPay,2)}}</p>
+                        <p>{{number_format(data.dueAmount,2)}}</p>
                     </div>
                 </div>
             </router-link>
@@ -84,10 +85,10 @@
         <li>
              <router-link  to="/coupon"> 
                 <div class="item">
-                    <div class="icon"><img :src="userCenter_icon_7" alt="优惠券"></div>
+                    <div class="icon"><img :src="userCenter_icon_6" alt="优惠券"></div>
                     <div class="detail">
                         <p>优惠券</p>
-                        <p>{{data.couponNumber}}张</p>
+                        <p>{{data.unUseCount}}张</p>
                     </div>
                 </div>
              </router-link>
@@ -96,10 +97,10 @@
         <li v-if="data.addQuotoType!==0">
            <a href="/xdm/m/index/addQuota/apply">
                 <div class="item">
-                    <div class="icon"><img :src="userCenter_icon_6" alt="我的提额"></div>
+                    <div class="icon"><img :src="userCenter_icon_7" alt="我的提额"></div>
                     <div class="detail">
                         <p>我的提额</p>
-                        <p>{{data.addQuotoType==1 ?'申请提额,畅玩世界':'可提升额度至'+ number_format(data.availableAddQuoto,2)+'元'}}</p>
+                        <p>{{data.addQuotoType==1 ?'申请提额,畅玩世界':'可提升额度至'+ number_format(data.sLimit,2)+'元'}}</p>
                     </div>
                 </div>
             </a>
@@ -109,7 +110,7 @@
             <router-link  to="/banklist">  
                 
 		        <div class="item">
-                    <div class="icon"><img :src="userCenter_icon_9" alt="开通自动还款"></div>
+                    <div class="icon"><img :src="userCenter_icon_8" alt="开通自动还款"></div>
                     <div class="detail">
                         <p>开通自动还款</p>
                         <p>选择还款方式</p>
@@ -120,7 +121,7 @@
         <li>
             <a href="https://8.m.tuniu.com/xdm/resources/helper.html">
                 <div class="item">
-                    <div class="icon"><img :src="userCenter_icon_10" alt="帮助中心"></div>
+                    <div class="icon"><img :src="userCenter_icon_9" alt="帮助中心"></div>
                     <div class="detail">
                         <p>帮助中心</p>
                         <p>不会使用?点我看</p>
@@ -132,7 +133,7 @@
             <router-link  to="/contract"> 
            
                 <div class="item">
-                    <div class="icon"><img :src="userCenter_icon_8" alt="服务协议"></div>
+                    <div class="icon"><img :src="userCenter_icon_10" alt="服务协议"></div>
                     <div class="detail">
                         <p>服务协议</p>
                         <p>消费信贷业务</p>
@@ -159,15 +160,15 @@ let __REQUEST=trendFun.__REQUEST();
 let __URILIST=_global.URILIST;
 
 //number_format(123,2)
-import userCenter_icon_2 from '../../common/img/userCenter_icon_2.png'
-import userCenter_icon_3 from '../../common/img/userCenter_icon_3.png'
-import userCenter_icon_4 from '../../common/img/userCenter_icon_4.png'
-import userCenter_icon_5 from '../../common/img/userCenter_icon_5.png'
-import userCenter_icon_6 from '../../common/img/userCenter_icon_6.png'
-import userCenter_icon_7 from '../../common/img/userCenter_icon_7.png'
-import userCenter_icon_8 from '../../common/img/userCenter_icon_8.png'
-import userCenter_icon_9 from '../../common/img/userCenter_icon_9.png'
-import userCenter_icon_10 from '../../common/img/userCenter_icon_10.png'
+import userCenter_icon_2 from '../../common/img/2.png'
+import userCenter_icon_3 from '../../common/img/3.png'
+import userCenter_icon_4 from '../../common/img/4.png'
+import userCenter_icon_5 from '../../common/img/5.png'
+import userCenter_icon_6 from '../../common/img/6.png'
+import userCenter_icon_7 from '../../common/img/7.png'
+import userCenter_icon_8 from '../../common/img/8.png'
+import userCenter_icon_9 from '../../common/img/9.png'
+import userCenter_icon_10 from '../../common/img/10.png'
 
   export default {
     name: 'app',
@@ -184,10 +185,13 @@ import userCenter_icon_10 from '../../common/img/userCenter_icon_10.png'
                 "addQuotoType": 0,
                 "availableAddQuoto": 0,
 
-                alertMessageTitle:"",
-                alertMessageContent:"",
+                noticeList:[]
+                
 
             },
+
+            activeIndex: 0,
+            animate:true,
 
 
             //availableQuota:可用额度  
@@ -215,16 +219,12 @@ import userCenter_icon_10 from '../../common/img/userCenter_icon_10.png'
         this.getIndex();
 
     },
-    mounted(){
-        // setTimeout(()=>{
-        //     let clientWidth=document.body.clientWidth;
-        //     let LiWidth=Math.round(clientWidth / 3, 2);
-        //     document.querySelectorAll(".panel ul li").forEach((e,i)=>{
-        //         //console.log(i,e);
-        //         e.style.height=LiWidth+'px';
-        //     })
-        // },500)
-    },
+    computed: {
+        top() {
+            return - this.activeIndex * 30 + 'px';
+        }
+   },
+
     methods:{
          getIndex(){
                 __REQUEST.bizParams={
@@ -242,6 +242,9 @@ import userCenter_icon_10 from '../../common/img/userCenter_icon_10.png'
                             //console.log( this.data)
                             //跳转路由
                             //this.$router.push({ path: '/vcode',query: { username: this.username, idNumber:this.idNumber,bankCardNumber: this.bankCardNumber, phoneNumber:this.phoneNumber }}); //跳转路由
+                            if(this.data.noticeList.length>0){
+                                this.scroll();
+                            }
                         
                     }else{
                         alert(response.data.msg);
@@ -254,19 +257,41 @@ import userCenter_icon_10 from '../../common/img/userCenter_icon_10.png'
          number_format(number, decimals, dec_point, thousands_sep){
                 return trendFun.number_format(number, decimals, dec_point, thousands_sep);
          },
-         alertMessage(){
+         alertMessage(index){
                 Dialog.alert({
                     // title:this.alertMessageTitle,
-                    message: this.data.alertMessageContent
+                    message: this.data.noticeList[index].desc
                  }).then(() => {
                     //alert("clsoed");
                 });
+         },
+         scroll(){
+               let intval=setInterval(()=> {               
+                    if(this.activeIndex < this.data.noticeList.length-1) {
+                        this.activeIndex += 1;                   
+                    } else {
+                        this.activeIndex = 0;                   
+                    }
+      
+                }, 1000);
+
+                if(this.data.noticeList.length==0){
+                    this.activeIndex = 0;                   
+                    clearInterval(intval);
+                }
          }
-          
+   
+       
     }
    
   }
 </script>
 
+<style>
+    .anim{
+        transition: top 0.5s;
+        position: relative;       
+    }
 
+</style>
 

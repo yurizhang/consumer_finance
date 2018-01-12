@@ -136,15 +136,14 @@ for index.vue
     background-color: #fff;
   }
   .panel ul li .item {
-    /* position: absolute;
+    position: absolute;
     top: 50%;
-    width: 100%; */
-    margin-top: 6px;
-    /* -webkit-transform: translateY(-50%);
+    width: 100%;
+    -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-    transform: translateY(-50%); */
+    transform: translateY(-50%);
   }
   .panel ul li:nth-child(3n + 3) {
     border-right: 0;
@@ -160,16 +159,19 @@ for index.vue
     background-color: #f2f5f8;
   }
   .panel ul li .icon {
+    width: 20%;
     margin: 0 auto 8px;
   }
   .panel ul li .icon img {
-    max-width: 30px;
+    width: 100%;
   }
-  .panel ul li p {    
+  .panel ul li p {
+    line-height: 1;
     font-size: 2.2rem;
   }
   .panel ul li p:first-child {
-    color: #666;   
+    color: #666;
+    margin-bottom: 5px;
   }
   .panel ul li p:last-child {
     color: #999;
