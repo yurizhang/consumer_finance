@@ -2,10 +2,17 @@
 .cell-margin{
     margin: 5px 0;
 }
-.van-cell-group-refine{
-  padding-left: 10px;
+.van-cell-group-refine{  
   background-color:transparent !important;
 }
+.van-cell-group{
+  padding-left: 0;
+}
+.checkbox--round-refine{
+  padding-left: 10px;
+}
+
+
 .fixed-van-nav-bar{
   z-index: 1000;
 }

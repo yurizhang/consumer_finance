@@ -575,21 +575,25 @@ for index.vue
 }
 
 .record {
-    width: 100%;
+    width: 96%;
     overflow: hidden;
-    padding: 18px 12px;
+    padding: 2px 20px;
     background-color: #f59909;
-    color: #fff;
-    font-size: 2.2rem
+    color: #fff; 
+    font-size: 15px;
+    height: 144px;
+    margin: 0 auto;
 }
-
+.record p{
+    margin-top: 10px;
+}
 .record p:nth-child(2) {
-    margin-bottom: 8px
+    margin-top: 22px
 }
 
 .record p:nth-child(1) {
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-top: 10px;
     display: block;
     width: 100%;
     overflow: hidden;
@@ -597,15 +601,11 @@ for index.vue
     text-overflow: ellipsis
 }
 
-.record p span:nth-child(2) {
-    float: right
-}
-
 .purchase {
     width: 100%;
     overflow: hidden;
     padding: 4%;
-    border-top: 1px solid #cfcfcf;
+    
     border-bottom: 1px solid #cfcfcf;
     background-color: #fff;
     text-align: center;
@@ -617,7 +617,7 @@ for index.vue
     width: 25%;
     float: left;
     overflow: hidden;
-    font-size: 2.2rem
+    font-size: 16px
 }
 
 .purchase p span {
@@ -641,6 +641,16 @@ for index.vue
 
 .purchase p:nth-child(4) {
     text-align: right
+}
+
+.purchase_title {
+    width: 100%;
+    overflow: hidden;
+    padding: 2%;    
+    border-bottom: 1px solid #cfcfcf;
+    text-align: left;
+    font-size:14px;
+
 }
 
 .combinde {
@@ -818,12 +828,10 @@ for index.vue
 }
 
 .purchase .nFcost_red {
-    font-size: 2.2rem
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.purchase em {
-    font-style: normal
-}
 
 .p_module {
     border-bottom: 1px solid #cfcfcf;
@@ -925,12 +933,12 @@ for index.vue
 }
 
 .bill li p:nth-child(3) {
-    font-size: 2rem;
+    font-size: 14px;
     margin-bottom: 0!important
 }
 
 .bill li p:nth-child(2) {
-    font-size: 2.2rem;
+    font-size: 18px;
     display: block;
     width: 100%;
     overflow: hidden;
@@ -951,7 +959,7 @@ for index.vue
 }
 
 .bill li p:nth-child(2) span:nth-child(4) {
-    font-size: 2rem;
+    font-size: 14px;
     float: right;
     margin-right: 8px;
     display: block;
@@ -961,8 +969,11 @@ for index.vue
 }
 
 .bill li p:nth-child(2) img {
-    height: 30px;
-    float: right
+    /* height: 30px;
+    float: right */
+    height: 22px; 
+    padding: 2px 8px;
+    margin-top: -2px;
 }
 
 .bill li p:nth-child(1) {
@@ -970,7 +981,10 @@ for index.vue
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
+    font-size: 17px;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom:4px;
 }
 
 .myhb_ts {

@@ -95,7 +95,7 @@
         </li>      
         
         <li v-if="data.addQuotoType!==0">
-           <a href="/xdm/m/index/addQuota/apply">
+           <a href="https://8.m.tuniu.com/xdm/m/index/addQuota/apply">
                 <div class="item">
                     <div class="icon"><img :src="userCenter_icon_7" alt="我的提额"></div>
                     <div class="detail">
@@ -176,17 +176,7 @@ import userCenter_icon_10 from '../../common/img/10.png'
       return{
             username:'',  //get user from cookie
             data:{
-                "availableQuota": 0,
-                "weekNeedToPay": 0,
-                "fixedQuota": 0,
-                "AllofNeedToPay": 0,
-                "couponNumber": 0,
-                "overdueNeedToPay": 0,
-                "addQuotoType": 0,
-                "availableAddQuoto": 0,
-
-                noticeList:[]
-                
+                noticeList:[]               
 
             },
 
@@ -232,13 +222,19 @@ import userCenter_icon_10 from '../../common/img/10.png'
 
                 }
                 //let request=JSON.stringify(__REQUEST);
-                if(_global._DEBUG) console.log( __REQUEST);
+                //if(_global._DEBUG) console.log( __REQUEST);
                 axios.post(__URILIST[0], __REQUEST).then( response=> {
-                    if(_global._DEBUG) console.log( response.data);
+                    //if(_global._DEBUG) console.log( response.data);
                     //let response=response.data;
                     if(response.data.success){ 
                             //console.log( this.data)
+                            if(response.data.data.isActive!=1){
+                                this.$router.push({ path: '/unavailable?from=index'});  //用户未开通
+                                return;
+                            }                           
+                            
                             this.data=response.data.data;
+
                             //console.log( this.data)
                             //跳转路由
                             //this.$router.push({ path: '/vcode',query: { username: this.username, idNumber:this.idNumber,bankCardNumber: this.bankCardNumber, phoneNumber:this.phoneNumber }}); //跳转路由

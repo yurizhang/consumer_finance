@@ -1,7 +1,7 @@
  <template>
 <div>
 
-    <van-nav-bar title="我的首付出发" leftArrow leftText="返回"  @click-left="backIndex()"></van-nav-bar>
+    <van-nav-bar title="开通首付出发"></van-nav-bar>
     <div class="form-table add-bank-card" v-if="oneStep">
         <div class="form-line">
             <label class="form-label">持卡人姓名</label>
@@ -63,8 +63,9 @@
             </p>
         </div>
         <div class="agreement">
-            <p id="xieyi_agree"><i class="icon-checkbox"></i>我同意 <a href="javascript:;" class="agreement-link">《用户协议》</a></p>
-            <p id="daikou_agree"><i class="icon-checkbox"></i>我同意设置该银行卡为代扣卡</p>
+
+            <p id="xieyi_agree"><van-checkbox class="v-icon-warning" v-model="checked1">我同意<a href="./index.html#/contract" class="agreement-link">《用户协议》</a></van-checkbox> </p>
+            <p id="daikou_agree"><van-checkbox v-model="checked2">我同意设置该银行卡为代扣卡</van-checkbox></p>
         </div>
 
 
@@ -134,6 +135,8 @@ export default {
           idNo:'320*************11',
           phoneNumber:'12345',
           code:'1234',
+          checked1:true,  //同意2个协议
+          checked2:true,
 
 
           bankinfo:{

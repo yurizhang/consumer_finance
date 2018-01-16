@@ -3,42 +3,39 @@
     "msg": null,
     "errorCode": 1,
     "desc":"productName产品名,price价格,applyDate申请日期，periods分期期数,state 1 已还清，2，待还款 3,有逾期",
+    "totalPage":15,
     "data": [
-        {
+        {            
             "id": 1,
-            "productName": "预定途牛旅游线路1",
-            "price": 2000,
-            "applyDate": "2017-11-21",
-            "periods": 12,
-            "currentPeriond":1,
-            "state": 1            
+            "orderText": "预定途牛旅游线路1", 
+            "loanAmount": 2000,
+            "applyTime": "2017-11-21",  
+            "term": 12,      
+            "state": 1  
        },
        {
         "id": 2,
-        "productName": "预定途牛旅游线路2",
-        "price": 20000,
-        "applyDate": "2017-11-22",
-        "periods": 12,
-        "currentPeriond":2,
+        "orderText": "预定途牛旅游线路2", 
+        "loanAmount": 2000,
+        "applyTime": "2017-11-22",  
+        "term": 12,      
         "state": 2            
       },
       {
         "id": 3,
-        "productName": "预定途牛旅游线路3",
-        "price": 1000,
-        "applyDate": "2017-11-23",
-        "periods": 12,
-        "currentPeriond":3,
-        "state": 3            
+        "orderText": "预定途牛旅游线路3", 
+        "loanAmount": 2000,
+        "applyTime": "2017-11-23",  
+        "term": 12,      
+        "state": 3           
      },
      {
         "id": 4,
-        "productName": "预定途牛旅游线路4",
-        "price": 15000,
-        "applyDate": "2017-11-24",
-        "periods": 12,
-        "currentPeriond":4,
-        "state": 3            
+        "orderText": "预定途牛旅游线路4", 
+        "loanAmount": 2000,
+        "applyTime": "2017-11-21",  
+        "term": 24,      
+        "state": 2            
     }
 
     ]

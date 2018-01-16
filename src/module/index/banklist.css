@@ -428,7 +428,8 @@ a,button,input {
     position: relative;
     background-color: #fff;
     padding: 6% 5%;
-    margin: 4% 0 3%
+    margin: 4% 0 3%;
+    min-height: 62px;
 }
 
 

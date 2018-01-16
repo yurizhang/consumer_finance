@@ -11,12 +11,13 @@
 		<ul class="bill">        			
 		   <router-link  :to="'/detail?id='+item.id" v-for="(item,index) in billList" :key="index"> 
   	        <li>
-                <p class="threeColor">{{item.productName}}</p>
+                <p class="threeColor">{{item.orderText}}</p>
                 <p class="nFcost_red">
-					<span>￥{{number_format(item.price)}}元</span><span>{{item.periods}}期</span><img :src="right_arrow"/>
-					<span class="sixColor">{{stateText(item.state)}}</span>
+					<span><strong>￥{{number_format(item.loanAmount)}}元</strong></span><span><strong>{{item.term}}期</strong></span> 
+					
+					<span class="sixColor">{{stateText(item.state)}} <span><img :src="right_arrow"/></span></span>
                 </p>
-                <p class="nineColor">申请日期：{{item.applyDate}}</p>
+                <p class="nineColor">申请日期：{{item.applyTime}}</p>
             </li>
 		   </router-link>        			
 		 </ul>     
@@ -40,10 +41,10 @@ let __URILIST=_global.URILIST;
 //import { Button } from 'vant';
 // Vue.component(Button.name, Button);
 const LISTSTATE=[];
-LISTSTATE[1]='已还清';
+LISTSTATE[1]='已逾期';
 LISTSTATE[2]='待还款';
-LISTSTATE[3]='已逾期';
-
+LISTSTATE[3]='已还清';   //state 1 已逾期，2，待还款 3,已还清, 4 已取消
+LISTSTATE[4]='已取消';
 import right_arrow from '../../common/img/right_arrow.png'
 export default {
   name: "button",
