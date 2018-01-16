@@ -14,7 +14,7 @@
         "availableAddQuoto": "123450",
 
 
-        "view": "activite",        
+        "isActive": 1,        
         "totalAvaiQuota": 3000, 
         "orderQuota": 2000, 
         "effectiveTime": "2018-01-01",
