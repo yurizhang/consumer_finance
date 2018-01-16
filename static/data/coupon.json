@@ -3,51 +3,57 @@
     "msg": null,
     "errorCode": 1,
     "desc": "优惠卷列表",
-    "list": [
+    "data": [
         {
-            "id":1,
+           
             "type": 0,
-            "name": "免息卷",
-            "subName": "3期免息券1",
+            "couponTypeName": "免息卷",
+            "rpName": "3期免息券1",
             "availablePeriod": "6期、12期、18期、24期",
-            "beginValidity": "2017-11-27 15:03:54",
-            "endValidity": "2017-11-27 15:03:54"
+            "addTime": "2017-11-27 15:03:54",
+            "invalidTime": "2017-11-27 15:03:54",
+            "useRule":""
         },
+
         {
-            "id":2,
+            
             "type": 1,
-            "name": "免息卷",
-            "subName": "3期免息券2",
+            "couponTypeName": "免息卷",
+            "rpName": "3期免息券2",
             "availablePeriod": "6期、12期、18期、24期",
-            "beginValidity": "2017-11-27 15:03:54",
-            "endValidity": "2017-11-27 15:03:54"
+            "addTime": "2017-11-27 15:03:54",
+            "invalidTime": "2017-11-27 15:03:54",
+            "useRule":""
         },
         {
-            "id":3,
-            "type": 1,
-            "name": "免息卷",
-            "subName": "3期免息券3",
-            "availablePeriod": "6期、12期、18期、24期",
-            "beginValidity": "2017-11-27 15:03:54",
-            "endValidity": "2017-11-27 15:03:54"
-        },
-        {
-            "id":4,
-            "type": 1,
-            "name": "免息卷",
-            "subName": "3期免息券4",
-            "availablePeriod": "6期、12期、18期、24期",
-            "beginValidity": "2017-11-27 15:03:54",
-            "endValidity": "2017-11-27 15:03:54"
-        },
-        {
-            "id":5,
+         
             "type": 0,
-            "name": "免息卷",
-            "subName": "3期免息券5",
+            "couponTypeName": "免息卷",
+            "rpName": "3期免息券3",
             "availablePeriod": "6期、12期、18期、24期",
-            "beginValidity": "2017-11-27 15:03:54",
-            "endValidity": "2017-11-27 15:03:54"
+            "addTime": "2017-11-27 15:03:54",
+            "invalidTime": "2017-11-27 15:03:54",
+            "useRule":""
+        },
+        {
+         
+            "type": 1,
+            "couponTypeName": "免息卷",
+            "rpName": "3期免息券4",
+            "availablePeriod": "6期、12期、18期、24期",
+            "addTime": "2017-11-27 15:03:54",
+            "invalidTime": "2017-11-27 15:03:54",
+            "useRule":""
+        },
+        {
+            
+            "type": 0,
+            "couponTypeName": "免息卷",
+            "rpName": "3期免息券5",
+            "availablePeriod": "6期、12期、18期、24期",
+            "addTime": "2017-11-27 15:03:54",
+            "invalidTime": "2017-11-27 15:03:54",
+            "useRule":""
         }
     ]
 }

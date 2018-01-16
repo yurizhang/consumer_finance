@@ -9,21 +9,21 @@
                             <li class="ticket-item" :class="(active /2) ? 'inactive':''" v-for="(item, li) in list" v-if="item.type==active" :key="li">
                                     <div class="ticket-header">
                                         <span class="amount">
-                                                {{item.name}}                       
+                                                {{item.couponTypeName}}                       
                                         </span>
                                         <span class="periods">                
                                                 适用期数：{{item.availablePeriod}}			    
                                         </span>                
-                                    </div>
+                                    </div>   
+
                                     <div class="ticket-content">
                                         <div class="detail">
-                                            <p class="orientation">{{item.subName}}</p>
-                                            <p class="date">有效期：{{item.beginValidity}}至{{item.endValidity}}</p>
+                                            <p class="orientation">{{item.rpName}}</p>
+                                            <p class="date">有效期：{{item.addTime}}至{{item.invalidTime}}</p>
                                         </div>
                                         <div class="rules" :class="{'displayBlock':showID==item.id}">
                                             <p>使用规则</p>
-                                            <p>1.新会员开通首付出发或老会员在会场可领取免息券，1、2、3期免息券随机发放；
-                                            2.系统领取免息券后，在收银台直接使用
+                                            <p>{{item.useRule}}
                                             </p>
                                         </div>
                                         <div class="link">
@@ -101,8 +101,12 @@
                     //"querytype": querytype
                 }     
                 axios.post(__URILIST[3], __REQUEST).then( response=> {
-                    if(response.data.success){                             
-							this.list=response.data.list;							
+                    if(response.data.success){
+                            response.data.data.forEach((e,i) => {
+                                e.id=(i+1);
+                            });                    
+                            this.list=response.data.data;
+                            console.log(this.list);						
                     }else{
                         alert(response.data.msg);
                     }

@@ -77,7 +77,7 @@ export default {
 
     getCoupon(){
       let platform=trendFun.getUrlParam("platform");  //this.$route.query.
-      console.log(platform);
+      //console.log(platform);
 
       let phoneNum=this.phoneNumber;       
       if(phoneNum=="" || !this.checkPhone(phoneNum)){        
