@@ -30,7 +30,7 @@
 <script>
 import axios from "axios";
 import {Dialog,Toast} from 'vant';
-import * as _global from "../../plugs/global";
+//import * as _global from "../../plugs/global";
 import TrendFun from "../../plugs/function";
 
 
