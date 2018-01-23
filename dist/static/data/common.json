@@ -3,6 +3,9 @@
     "msg": "", 
     "errorCode": 0,
     "data":{
-         "test":"这个是成功"
+         "test":"这个是成功",
+         "bankCode" : "BCCB",
+         "bankName" : "北京银行",
+         "cardType" : 1 
     }
 }

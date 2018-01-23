@@ -1,36 +1,40 @@
 {
-    "success": true,
-    "msg": null,
-    "errorCode": 1,
-    "desc": "银行卡列表",
-    "list": [
-        {
-            "id":1,
-            "iconType": "CMB",
-            "name": "招商银行",
-            "type": "储蓄卡",
-            "cardNo": "621485******1106",
-            "icon": ""
-       
-        },
-        {
-            "id":2,
-            "iconType": "ABC",
-            "name": "农业银行",
-            "type": "储蓄卡",
-            "cardNo": "621485******1106",
-            "icon": ""
-       
-        },
-        {
-            "id":3,
-            "iconType": "ICBC",
-            "name": "工商银行",
-            "type": "储蓄卡",
-            "cardNo": "621485******1106",
-            "icon": ""
-       
-        }
-        
+  "success": true,
+  "msg": null,
+  "errorCode": 1,
+  "desc": "银行卡列表",
+
+  "data": {
+
+    "state": 1,
+    "cardList": [{
+        "cardUniqueId": 1,
+        "bankCode": "CMB",
+        "bankName": "招商银行",
+        "cardTypeName": "储蓄卡",
+        "cardNo": "621485******1106",
+        "icon": ""
+      },
+      {
+        "cardUniqueId": 2,
+        "bankCode": "ABC",
+        "bankName": "农业银行",
+        "cardTypeName": "储蓄卡",
+        "cardNo": "621485******1106",
+        "icon": ""
+
+      }, {
+        "cardUniqueId": 3,
+        "bankCode": "ICBC",
+        "bankName": "工商银行",
+        "cardTypeName": "储蓄卡",
+        "cardNo": "621485******1106",
+        "icon": ""
+
+      }
+
+
+
     ]
+  }
 }

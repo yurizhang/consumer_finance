@@ -187,11 +187,11 @@ export default {
     this.getCardList();
   },
   methods: {
-    // backIndex() {
-    //   this.$router.push({ path: '/', query: { from: 'banklist' }})
-    //   return;
+    backIndex() {
+      this.$router.push({ path: '/', query: { from: 'banklist' }})
+      return;
 
-    // },
+    },
     onBeforeRead(file){
         //读取之前
        // setTimeout(() => {
