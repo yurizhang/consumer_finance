@@ -1,8 +1,9 @@
 <template>
+<div>
+<van-nav-bar title="服务协议" leftArrow leftText="返回"  @click-left="backIndex()"></van-nav-bar>
+
+
 <div class="b1 b2">
-
-
-
 <p class="p1">
 <span class="s1">消费信贷业务服务协议</span>
 </p>
@@ -925,45 +926,295 @@
 <span class="s2">10.​&nbsp;</span><span>根据法律法规或本协议约定有权采取的其他违约救济措施。</span>
 </p>
 <p class="p3"></p>
-
+</div>
 
 
 
 </div>
 </template>
+
+<script>
+import { Dialog, Toast } from "vant";
+import axios from "axios";
+import * as _global from "../../plugs/global";
+import TrendFun from "../../plugs/function";
+
+//let trendFun=new TrendFun(); //公共函数库
+//let __REQUEST=trendFun.__REQUEST();
+let __URILIST = _global.URILIST;
+
+const testList = [
+  {
+    id: 1,
+    title: "服务协议"
+  },
+  {
+    id: 1,
+    title: "信用信息查询授权书"
+  },
+  {
+    id: 2,
+    title: "消费信贷业务服务协议"
+  }
+];
+
+export default {
+  name: "app",
+  data() {
+    return {
+      list: testList || []
+    };
+  },
+  created() {
+    this.getContractList();
+  },
+  methods: {
+    backIndex() {
+      this.$router.push({ path: "/contractlist" });
+      return;
+    },
+    getContractList() {
+      let request = {};
+      axios
+        .post(__URILIST[10], request)
+        .then(response => {
+          if (response.data.success) {
+            //this.list = response.data.list;
+          } else {
+            alert(response.data.msg);
+          }
+        })
+        .catch(error => {
+          //console.log(error);
+          //reject(error);
+        });
+    }
+  }
+};
+</script>
+
+
 <style scoped>
-.b1{white-space-collapsing:preserve;}
-.b2{margin: 5%}
-.s1{font-weight:bold;}
-.s2{display: inline-block; text-indent: 0; min-width: 0.44444445in;}
-.s3{display: inline-block; text-indent: 0; min-width: 0.38194445in;}
-.s4{display: inline-block; text-indent: 0; min-width: 0.19444445in;}
-.s5{display: inline-block; text-indent: 0; min-width: 0.048611112in;}
-.s6{display: inline-block; text-indent: 0; min-width: 0.18402778in;}
-.s7{font-family:Tahoma;font-size:9pt;color:#4d4d4d;}
-.s8{display: inline-block; text-indent: 0; min-width: 0.4340278in;}
-.p1{margin-right:0.5833333in;text-align:justify;hyphenate:auto;font-family:Times New Roman;font-size:14pt;}
-.p2{margin-right:0.875in;text-align:justify;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p3{text-align:justify;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p4{text-align:justify;hyphenate:auto;font-family:Times New Roman;font-size:12pt;}
-.p5{text-indent:0.29166666in;margin-left:0.25in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p6{margin-left:0.25in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p7{text-indent:0.29166666in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p8{text-indent:0.29166666in;margin-left:0.3125in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p9{text-indent:0.29166666in;margin-left:0.5in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p10{text-indent:0.29305556in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p11{text-indent:0.29166666in;margin-left:0.6458333in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p12{margin-left:0.3125in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p13{text-indent:0.29166666in;margin-left:0.5104167in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p14{margin-left:0.5104167in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p15{text-indent:-0.21875in;margin-left:0.21875in;text-align:justify;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p16{text-indent:0.29166666in;margin-left:0.75in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p17{text-indent:-0.21944444in;margin-left:0.21944444in;text-align:justify;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p18{text-indent:0.072916664in;margin-left:-0.2875in;margin-right:-0.7291667in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p19{margin-top:0.06944445in;margin-bottom:0.06944445in;text-align:justify;hyphenate:auto;font-family:宋体;font-size:12pt;}
-.p20{margin-left:0.25in;text-align:justify;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p21{margin-left:0.5in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p22{text-indent:0.29166666in;text-align:justify;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p23{text-indent:0.29166666in;margin-left:0.26041666in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
-.p24{margin-left:0.26041666in;text-align:start;hyphenate:auto;font-family:Times New Roman;font-size:10pt;}
+.b1 {
+  white-space-collapsing: preserve;
+}
+.b2 {
+  margin: 5%;
+}
+.s1 {
+  font-weight: bold;
+}
+.s2 {
+  display: inline-block;
+  text-indent: 0;
+  min-width: 0.44444445in;
+}
+.s3 {
+  display: inline-block;
+  text-indent: 0;
+  min-width: 0.38194445in;
+}
+.s4 {
+  display: inline-block;
+  text-indent: 0;
+  min-width: 0.19444445in;
+}
+.s5 {
+  display: inline-block;
+  text-indent: 0;
+  min-width: 0.048611112in;
+}
+.s6 {
+  display: inline-block;
+  text-indent: 0;
+  min-width: 0.18402778in;
+}
+.s7 {
+  font-family: Tahoma;
+  font-size: 9pt;
+  color: #4d4d4d;
+}
+.s8 {
+  display: inline-block;
+  text-indent: 0;
+  min-width: 0.4340278in;
+}
+.p1 {
+  margin-right: 0.5833333in;
+  text-align: justify;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 14pt;
+}
+.p2 {
+  margin-right: 0.875in;
+  text-align: justify;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p3 {
+  text-align: justify;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p4 {
+  text-align: justify;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 12pt;
+}
+.p5 {
+  text-indent: 0.29166666in;
+  margin-left: 0.25in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p6 {
+  margin-left: 0.25in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p7 {
+  text-indent: 0.29166666in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p8 {
+  text-indent: 0.29166666in;
+  margin-left: 0.3125in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p9 {
+  text-indent: 0.29166666in;
+  margin-left: 0.5in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p10 {
+  text-indent: 0.29305556in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p11 {
+  text-indent: 0.29166666in;
+  margin-left: 0.6458333in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p12 {
+  margin-left: 0.3125in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p13 {
+  text-indent: 0.29166666in;
+  margin-left: 0.5104167in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p14 {
+  margin-left: 0.5104167in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p15 {
+  text-indent: -0.21875in;
+  margin-left: 0.21875in;
+  text-align: justify;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p16 {
+  text-indent: 0.29166666in;
+  margin-left: 0.75in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p17 {
+  text-indent: -0.21944444in;
+  margin-left: 0.21944444in;
+  text-align: justify;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p18 {
+  text-indent: 0.072916664in;
+  margin-left: -0.2875in;
+  margin-right: -0.7291667in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p19 {
+  margin-top: 0.06944445in;
+  margin-bottom: 0.06944445in;
+  text-align: justify;
+  hyphenate: auto;
+  font-family: 宋体;
+  font-size: 12pt;
+}
+.p20 {
+  margin-left: 0.25in;
+  text-align: justify;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p21 {
+  margin-left: 0.5in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p22 {
+  text-indent: 0.29166666in;
+  text-align: justify;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p23 {
+  text-indent: 0.29166666in;
+  margin-left: 0.26041666in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
+.p24 {
+  margin-left: 0.26041666in;
+  text-align: start;
+  hyphenate: auto;
+  font-family: Times New Roman;
+  font-size: 10pt;
+}
 </style>

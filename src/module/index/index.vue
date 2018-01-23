@@ -59,7 +59,7 @@
             </router-link>
         </li>
 
-        <li>
+        <!-- <li>
             <router-link  to="/list?queryType=3">  
                 <div class="item">
                     <div class="icon"><img :src="userCenter_icon_4" alt="分期还款"></div>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </router-link>
-        </li>
+        </li> -->
         <li>
             <router-link  to="/list">  
                 <div class="item">
@@ -95,7 +95,7 @@
         </li>      
         
         <li v-if="data.addQuotoType!==0">
-           <a href="https://8.m.tuniu.com/xdm/m/index/addQuota/apply">
+           <router-link  to="/upload">  
                 <div class="item">
                     <div class="icon"><img :src="userCenter_icon_7" alt="我的提额"></div>
                     <div class="detail">
@@ -103,7 +103,7 @@
                         <p>{{data.addQuotoType==1 ?'申请提额,畅玩世界':'可提升额度至'+ number_format(data.sLimit,2)+'元'}}</p>
                     </div>
                 </div>
-            </a>
+            </router-link>
         </li>
 
         <li>
@@ -130,12 +130,12 @@
             </a>
         </li>
         <li>
-            <router-link  to="/contract"> 
+            <router-link  to="/contractlist"> 
            
                 <div class="item">
                     <div class="icon"><img :src="userCenter_icon_10" alt="服务协议"></div>
                     <div class="detail">
-                        <p>服务协议</p>
+                        <p>{{data.contractState==1 ?'服务协议' :'更新协议'}}</p>
                         <p>消费信贷业务</p>
                     </div>
                 </div>

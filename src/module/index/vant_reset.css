@@ -16,3 +16,8 @@
 .fixed-van-nav-bar{
   z-index: 1000;
 }
+
+/*协议列表*/
+div.contractlist{
+  padding-left: 12px;
+}

@@ -6,6 +6,12 @@ var app = express()
 
 var apiRoutes = express.Router()
 // 使用api的方法来创建连接时候的请求
+
+apiRoutes.post('/common', function (req, res) {
+  var appData = require('../static/data/common.json');
+  res.json(appData);
+})
+
 apiRoutes.post('/index', function (req, res) {
   var appData = require('../static/data/_index.json');
   res.json(appData);

@@ -116,19 +116,22 @@ for index.vue
 
   
   .panel{margin-top: 28px;}
-  
+  .panel ul{
+      display: flex;
+      flex-wrap: wrap;
+  }
  
-  .panel ul:after,
+  /* .panel ul:after,
   .panel ul:before {
     content: " ";
     display: table;
   }
   .panel ul:after {
     clear: both;
-  }
+  } */
   .panel ul li {
-    position: relative;
-    float: left;
+    /* position: relative;
+    float: left; */
     width: 33.33333%;
     text-align: center;
     border-right: 1px solid #f2f5f8;

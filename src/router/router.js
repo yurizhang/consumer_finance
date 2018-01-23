@@ -9,9 +9,10 @@ import index from '../module/index/index.vue'; //首页
 import coupon from '../module/index/coupon.vue';  //优惠卷
 import banklist from '../module/index/banklist.vue';  //银行列表 管理自动还款
 import contract from '../module/index/contract.vue';  //合同协议
+import contractlist from '../module/index/contractList.vue';  //合同协议
 import addbank from '../module/index/addbank.vue';  //添加银行
 import unavailable from '../module/index/unavailable.vue';  //未开通，分2步，1.填写四要素，2.填写预警留手机号码  3.成功or失败
-
+//import upload from '../module/index/upload.vue';
 export default new Router({
   routes:[
     {
@@ -42,9 +43,18 @@ export default new Router({
       path:'/contract',
       component:contract
     },
+    {
+      path:'/contractlist',
+      component:contractlist
+    },    
     { 
       path:'/unavailable',
       component:unavailable
+    },
+    { 
+      path:'/upload',
+      name:"upload",
+      component: resolve => require(['../module/index/upload.vue'], resolve)
     }
   ]
 })
