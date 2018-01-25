@@ -12,25 +12,30 @@ apiRoutes.post('/common', function (req, res) {
   res.json(appData);
 })
 
-apiRoutes.post('/index', function (req, res) {
+apiRoutes.get('/common', function (req, res) {
+  var appData = require('../static/data/common.json');
+  res.json(appData);
+})
+
+apiRoutes.get('/index', function (req, res) {
   var appData = require('../static/data/_index.json');
   res.json(appData);
 })
-apiRoutes.post('/list', function (req, res) {
+apiRoutes.get('/list', function (req, res) {
   var appData = require('../static/data/list.json');
   res.json(appData);
 })
-apiRoutes.post('/detail', function (req, res) {
+apiRoutes.get('/detail', function (req, res) {
   var appData = require('../static/data/detail.json');
   res.json(appData);
 })
 
-apiRoutes.post('/coupon', function (req, res) {
+apiRoutes.get('/coupon', function (req, res) {
   var appData = require('../static/data/coupon.json');
   res.json(appData);
 })
 
-apiRoutes.post('/bankCardList', function (req, res) {
+apiRoutes.get('/bankCardList', function (req, res) {
   var appData = require('../static/data/bankcardlist.json');
   res.json(appData);
 })

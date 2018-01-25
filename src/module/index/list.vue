@@ -9,7 +9,7 @@
 	</div>
     <div class="all">        		
 		<ul class="bill">        			
-		   <router-link  :to="'/detail?id='+item.id" v-for="(item,index) in billList" :key="index"> 
+		   <router-link  :to="'/detail?id='+item.id+'&querytype='+querytype" v-for="(item,index) in billList" :key="index"> 
   	        <li>
                 <p class="threeColor">{{item.orderText}}</p>
                 <p class="nFcost_red">
@@ -51,13 +51,14 @@ export default {
   data(){
 	  return{
 		  billList:[],
+		  querytype:3,
 
 		  right_arrow
 	  }
   },
   created(){
-	  let querytype=this.$route.query.queryType||0;   //0表示 显示全部
-	  this.getList(querytype);
+	  this.querytype=this.$route.query.queryType||3;   //0表示 显示全部
+	  this.getList(this.querytype);
       //console.log(querytype);
   },
 
@@ -87,10 +88,10 @@ export default {
 	},
 	ajaxDate(querytype) {
 		//return new Promise((resolve, reject)=> {
-			     __REQUEST.bizParams={
-                    "querytype": querytype
+			    let request={
+                    "queryType": querytype
                 }     
-                axios.post(__URILIST[1], __REQUEST).then( response=> {
+                axios.get(__URILIST[1], {params:request}).then( response=> {
                     if(response.data.success){                             
 							this.billList=response.data.data;							
                     }else{

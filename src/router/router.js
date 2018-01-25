@@ -52,8 +52,11 @@ export default new Router({
       component:unavailable
     },
     { 
+      path:'/addquota',
+      component: resolve => require(['../module/index/addquota.vue'], resolve)
+    },
+    { 
       path:'/upload',
-      name:"upload",
       component: resolve => require(['../module/index/upload.vue'], resolve)
     }
   ]

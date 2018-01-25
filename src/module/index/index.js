@@ -2,9 +2,13 @@ import 'babel-polyfill';
 import Vue from 'vue'
 import App from './App.vue'
 import router from '../../router/router.js';
-
+//import TrendFun from "../../plugs/function";
 Vue.config.productionTip = false;
 
+// const trendFun=new TrendFun();
+// let token=trendFun.getUrlParam('token');
+// trendFun.setCookie('token',token, 1);
+// //console.log(token);
 
 
 //Vant UI  全局使用
@@ -36,6 +40,7 @@ import './reset.css'
 import './index.css'
 import './banklist.css'
 import './coupon.css'
+import './upload.css'
 import './vant_reset.css'
 
 import 'vant/lib/vant-css/icon-local.css';  //加载本地的字体文件

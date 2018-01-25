@@ -48,10 +48,10 @@
 
    import axios from 'axios';
    import  * as _global from '../../plugs/global';
-   import TrendFun from '../../plugs/function';
+   //import TrendFun from '../../plugs/function';
 
-   let trendFun=new TrendFun(); //公共函数库
-   let __REQUEST=trendFun.__REQUEST();
+  // let trendFun=new TrendFun(); //公共函数库
+   //let __REQUEST=trendFun.__REQUEST();
    let __URILIST=_global.URILIST;
 
    const couponType=['未使用','已使用'];
@@ -97,10 +97,8 @@
             return couponType[index-1];
         },
         getCoupon(){
-            	__REQUEST.bizParams={
-                    //"querytype": querytype
-                }     
-                axios.post(__URILIST[3], __REQUEST).then( response=> {
+                 
+                axios.get(__URILIST[3]).then( response=> {
                     if(response.data.success){
                             response.data.data.forEach((e,i) => {
                                 e.id=(i+1);

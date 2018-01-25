@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "msg": null,
+  "errorCode": 1,
+  "data": {
+    "state": 5,
+    "addQuotaPermit": 1,
+    "files": [
+        {
+        "type": 1,
+        "fileName": "1.png",
+        "url": "http://10.10.32.160//fb2/t1/group1/M00/00/4D/CgogolpdXrWIYs17AAmmNnE5alUAAADhALutzwACaZO552.png"
+      },
+      {
+        "type": 1,
+        "fileName": "2.png",
+        "url": "http://10.10.32.160//fb2/t1/group1/M00/00/4D/CgogolpdYSmIZfSEAA6nXkxGuxQAAADhAMCtJgADqd2017.png"
+      },
+      {
+        "type": 2,
+        "fileName": "1.png",
+        "url": "http://10.10.32.160//fb2/t1/group1/M00/00/4D/CgogolpdYSCIbGpxAAmmNnE5alUAAADhAL5DkoACaZO078.png"
+      },
+      {
+        "type": 3,
+        "fileName": "1.png",
+        "url": "http://10.10.32.160//fb2/t1/group1/M00/00/4D/CgogolpdYTGIGs3EAAmmNnE5alUAAADhAMRXA4ACaZO861.png"
+      },
+      {
+        "type": 4,
+        "fileName": "1.png",
+        "url": "http://10.10.32.160//fb2/t1/group1/M00/00/4D/CgogolpdYTGIGs3EAAmmNnE5alUAAADhAMRXA4ACaZO861.png"
+      },
+      {
+        "type": 4,
+        "fileName": "1.png",
+        "url": "http://10.10.32.160//fb2/t1/group1/M00/00/4D/CgogolpdYTGIGs3EAAmmNnE5alUAAADhAMRXA4ACaZO861.png"
+      }   
+    ]
+  }
+}

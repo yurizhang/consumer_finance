@@ -163,7 +163,7 @@ export default {
   created(){
       //api/card/realinfo
       //实名信息
-      axios.post(__URILIST[13]).then(response => {
+      axios.get(__URILIST[13]).then(response => {
           if (response.data.success) {
                 this.idNo=response.data.data.idNo;  // 身份证号
                 this.userName=response.data.data.idNo; // 姓名           
@@ -275,7 +275,9 @@ export default {
                             //this.result_fail=true;
 
                 } else {
-                    alert(response.data.msg);
+                    this.result_success=false;
+                    this.result_fail=true;
+                    //alert(response.data.msg);
                 }
             });
 
@@ -288,7 +290,7 @@ export default {
         //根据银行卡号得到这个信息的基本信息ajax
         //let res={};
         let p=new Promise((resolve,reject)=>{            
-            axios.post(__URILIST[14],request).then(response => {
+            axios.get(__URILIST[14],{params:request}).then(response => {
                 resolve(response.data);
             }) 
         });
@@ -319,7 +321,7 @@ export default {
                }
             });
 
-            let i=0, second=10; //倒计时多少秒
+            let i=0, second=60; //倒计时多少秒
             let to=setInterval(_=>{
                 if(i<second){
                     this.timeout=(second-i);

@@ -83,10 +83,8 @@ let __URILIST=_global.URILIST;
 		  return;
 
 	    },
-        getCardList(){
-            	let request={                  
-                }     
-                axios.post(__URILIST[4], request).then( response=> {
+        getCardList(){                
+                axios.get(__URILIST[4]).then( response=> {
                     if(response.data.success){                             
                             this.cardList=response.data.data.cardList;	
                             if(response.data.data.state==1){

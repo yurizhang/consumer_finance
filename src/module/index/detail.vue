@@ -70,7 +70,7 @@ import TrendFun from '../../plugs/function';
 import gantan_icon from "../../common/img/gantan.png";
 
 let trendFun=new TrendFun(); //公共函数库
-let __REQUEST=trendFun.__REQUEST();
+//let __REQUEST=trendFun.__REQUEST();
 let __URILIST=_global.URILIST;
 // const ORDERSTATE=[];
 // ORDERSTATE[1]='有逾期';
@@ -131,19 +131,21 @@ const origin_result=[];   //用于缓存当前所有的列表id
       }
     },
     created(){
-        	let id=parseInt(this.$route.query.id,10)||0;   //0表示 显示全部
-	        this.getDetail(id);
+            let id=parseInt(this.$route.query.id,10)||0;   //0表示 显示全部
+            let queryType=parseInt(this.$route.query.querytype,10)||3;   //0表示 显示全部
+	        this.getDetail(id,queryType);
     },
     methods:{
         backIndex() {		  
 		  this.$router.push({ path: '/list'})
 		  return;
 	    },
-        getDetail(id){
-            	 __REQUEST.bizParams={
-                    "id": id
+        getDetail(id,queryType){
+            	 let request={
+                    "id": id,
+                    "queryType": queryType
                 }     
-                axios.post(__URILIST[2], __REQUEST).then( response=> {
+                axios.get(__URILIST[2], {params:request}).then( response=> {
                     if(response.data.success){                             
                             this.billDetail=response.data.data.billDetail;	
                             this.billInfo=response.data.data.billInfo;	
@@ -208,9 +210,26 @@ const origin_result=[];   //用于缓存当前所有的列表id
         },
         payNow(){
             //去支付
-            if(this.id_result.length!=0){
-                alert('去支付:'+this.id_result.toString());
+            // if(this.id_result.length!=0){
+            //     alert('去支付:'+this.id_result.toString());
+            // }
+            let request={
+                  planIdsStr: this.id_result.toString(), // 还款计划id列表，逗号隔开
+                  amount: this.currentQuota // 支付金额
             }
+            axios.post(__URILIST[24],request).then(response => {
+                if (response.data.success) {
+                    
+                      location.href=response.data.data.url;
+                      return;        
+                } else {
+                    alert(response.data.msg);
+                }
+            }).catch((error)=>{
+                alert("抱歉发生了错误，请检查您的网络，稍后再试");
+            })
+
+
         },
         showMoreInfo(id){
             //<!--弹出框-->

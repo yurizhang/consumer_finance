@@ -190,7 +190,7 @@ export default {
   created(){
       //api/card/realinfo
       //实名信息
-      axios.post(__URILIST[13]).then(response => {
+      axios.get(__URILIST[13]).then(response => {
           if (response.data.success) {
                 this.idNo=response.data.data.idNo;  // 身份证号
                 this.userName=response.data.data.idNo; // 姓名           
@@ -292,7 +292,7 @@ export default {
                 phone: this.phoneNumber, // 手机号码
                 verifyCode: this.code,  // 验证码
                 fingerPrint: this.fingerPrint,  // 指纹字段  风控字段
-                type:2 // 区分验证码是实名还是添加卡 2 添加银行卡
+                type:1 // 区分验证码是实名还是添加卡, 1是实名, 2 添加银行卡
             } 
             
             axios.post(__URILIST[15],request).then(response => {

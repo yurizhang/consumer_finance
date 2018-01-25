@@ -35,7 +35,7 @@
 <div class="panel">
     <ul>
         <li>
-            <router-link  class="billListHref" to="/list?queryType=2">            
+            <router-link  class="billListHref" to="/list?queryType=3">            
                 <div class="item">
                     <div class="icon"><img :src="userCenter_icon_2" alt="全部还款"></div>
                     <div class="detail">
@@ -48,7 +48,7 @@
         </li>
 
         <li>
-            <router-link  to="/list?queryType=3">  
+            <router-link  to="/list?queryType=1">  
                 <div class="item">
                     <div class="icon"><img :src="userCenter_icon_3" alt="逾期还款"></div>
                     <div class="detail">
@@ -60,7 +60,7 @@
         </li>
 
         <!-- <li>
-            <router-link  to="/list?queryType=3">  
+            <router-link  to="/list?queryType=6">  
                 <div class="item">
                     <div class="icon"><img :src="userCenter_icon_4" alt="分期还款"></div>
                     <div class="detail">
@@ -71,7 +71,7 @@
             </router-link>
         </li> -->
         <li>
-            <router-link  to="/list">  
+            <router-link  to="/list?queryType=4">  
                 <div class="item">
                     <div class="icon"><img :src="userCenter_icon_5" alt="我的订单"></div>
                     <div class="detail">
@@ -95,7 +95,7 @@
         </li>      
         
         <li v-if="data.addQuotoType!==0">
-           <router-link  to="/upload">  
+           <router-link  :to="data.addQuotoType==1 ?'/upload':'/addquota'">  
                 <div class="item">
                     <div class="icon"><img :src="userCenter_icon_7" alt="我的提额"></div>
                     <div class="detail">
@@ -156,7 +156,7 @@ import TrendFun from '../../plugs/function';
 
 //axios.defaults.headers.common['TN-REQ-DATA-TYPE'] = 'json/text';
 let trendFun=new TrendFun(); //公共函数库
-let __REQUEST=trendFun.__REQUEST();
+//let __REQUEST__REQUEST=trendFun.__REQUEST();
 let __URILIST=_global.URILIST;
 
 //number_format(123,2)
@@ -217,13 +217,11 @@ import userCenter_icon_10 from '../../common/img/10.png'
 
     methods:{
          getIndex(){
-                __REQUEST.bizParams={
-                    "username": this.username
-
-                }
+             
                 //let request=JSON.stringify(__REQUEST);
                 //if(_global._DEBUG) console.log( __REQUEST);
-                axios.post(__URILIST[0], __REQUEST).then( response=> {
+           
+                axios.get(__URILIST[0]).then( response=> {
                     //if(_global._DEBUG) console.log( response.data);
                     //let response=response.data;
                     if(response.data.success){ 

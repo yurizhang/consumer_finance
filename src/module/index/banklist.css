@@ -471,11 +471,20 @@ a,button,input {
 .result img {
     width: 48%
 }
-
+.result .result-title {
+    font-size: 2.8rem;
+    margin-top: 5%;
+   
+}
 .result .result-info {
     font-size: 1.4rem;
     margin-top: 5%;
-    margin-bottom: 12%
+    margin-bottom: 10%;
+    color:#999
+}
+.result .result-price {
+
+    color:rgb(247, 11, 11)
 }
 
 .result .jump-info {

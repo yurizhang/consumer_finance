@@ -1,0 +1,56 @@
+.photoUpload .id_title{   
+    border-bottom: 1px solid #CFCFCF;
+}
+.photoUpload  .id_title .van-panel__title, .tab_title .van-tab {
+  font-size: 15px;
+  color: #0079ff;
+}
+.photoUpload  .uploadArea {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  
+  display: flex;
+  justify-content: space-around;
+
+}
+.photoUpload  .uploadAreaSing {
+  visibility: hidden;
+}
+.photoUpload  .uploadArea img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.photoUpload  .uploadArea .van-button {
+  background: #ebeef3;
+  border-radius: 2px;
+  width: 108px;
+  height: 70px;
+  font-size: 16px;
+}
+.photoUpload  .uploadArea.marginTop30{
+    margin-top: 30px;
+}
+.photoUpload  .uploadArea.warning{
+    position: relative;
+    margin: 15px auto;
+    width: 90%;
+    font-size: 14px;
+    color: #F00;
+    line-height: 20px;
+}
+.photoUpload  .upload_memo{  
+    font-size: 12px;
+    color: #F59909;
+    text-align: right;
+    margin: 20px;
+}
+
+.photoUpload .id_title .van-panel__desc{
+   font-size: 12px;
+    color: #F59909;
+    text-align: right;
+}
+
+.photoUpload .button_grey{
+    background: rgb(148, 145, 145);
+}
