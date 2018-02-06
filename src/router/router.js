@@ -58,6 +58,10 @@ export default new Router({
     { 
       path:'/upload',
       component: resolve => require(['../module/index/upload.vue'], resolve)
+    },
+    { 
+      path:'/help',
+      component: resolve => require(['../module/index/help.vue'], resolve)
     }
   ]
 })

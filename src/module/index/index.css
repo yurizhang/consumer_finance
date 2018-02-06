@@ -1242,7 +1242,10 @@ for index.vue
 
 
 
-
+.anim{
+    transition: top 0.5s;
+    position: relative;       
+}
 
 .fakeloader{
     display: table;
@@ -1251,3 +1254,4 @@ for index.vue
 .foot .UnselectButton{
     background-color: #dadada !important
 }
+

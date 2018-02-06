@@ -39,13 +39,14 @@ export default {
           this.needUp=parseInt(this.$route.query.needUp,10);   //0表示更新 其它不要
           this.docType=id;
           if(id==1){
-            this.iframeUrl='http://8.m.tuniu.com/xdm/m/index/contractAuth';
+            this.iframeUrl=__URILIST[25];
           }else if(id==2){
-            this.iframeUrl='http://8.m.tuniu.com/xdm/m/index/contract';
+            this.iframeUrl=__URILIST[26];
           }
           Toast.loading({ mask: true,  duration: 0,       // 持续展示 toast
-  forbidClick: true, // 禁用背景点击
-  message: '正在加载中...' });
+                forbidClick: true, // 禁用背景点击
+                message: '正在加载中...'
+          });
           
   },
   //  mounted(){

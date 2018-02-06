@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import Vue from 'vue'
 import App from './App.vue'
+import axios from 'axios' 
 import router from '../../router/router.js';
 //import TrendFun from "../../plugs/function";
 Vue.config.productionTip = false;
@@ -9,6 +10,25 @@ Vue.config.productionTip = false;
 // let token=trendFun.getUrlParam('token');
 // trendFun.setCookie('token',token, 1);
 // //console.log(token);
+
+//添加响应拦截器
+axios.interceptors.response.use (function(response){
+  //对响应数据做些事
+   //console.log("首页")
+   //console.log(response);
+   if(response.data.errorCode==500){
+       //console.log(response.data.data.redirectUrl+"http://www.tuniu.org:8090/module/index.html");
+       location.href=response.data.data.redirectUrl+"http://www.tuniu.org:8090/module/index.html";
+       return false;
+   }
+    
+   return response;
+},function(error){
+  //请求错误时做些事
+   console.log("response error:");
+   console.log(error);
+   //return Promise.reject(error);
+});
 
 
 //Vant UI  全局使用

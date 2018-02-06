@@ -3,10 +3,10 @@
       <van-nav-bar title="服务协议" leftArrow leftText="返回"  @click-left="backIndex()"></van-nav-bar>
       <van-cell-group class="contractlist">        
         <van-cell title="信用信息查询授权书" :to="'/contract?id=1&needUp='+contractAuthState" is-link>               
-               <span :class="contractAuthState==0?'nFcost_red':''">{{contractAuthState==0? '查看':'更新'}}</span>
+               <span :class="contractAuthState==1?'nFcost_red':''">{{contractAuthState==0? '查看':'更新'}}</span>
         </van-cell>
         <van-cell title="消费信贷业务服务协议" :to="'/contract?id=2&needUp='+contractLoanState" is-link>
-              <span :class="contractLoanState==0?'nFcost_red':''">{{contractLoanState==0? '查看':'更新'}}</span>
+              <span :class="contractLoanState==1?'nFcost_red':''">{{contractLoanState==0? '查看':'更新'}}</span>
         </van-cell>
      </van-cell-group>
   </div>

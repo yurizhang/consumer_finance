@@ -1,11 +1,27 @@
 {
-    "success": true,
-    "msg": "", 
-    "errorCode": 0,
-    "data":{
-         "test":"这个是成功",
-         "bankCode" : "BCCB",
-         "bankName" : "北京银行",
-         "cardType" : 1 
-    }
+  "success": true,
+  "msg": "",
+  "errorCode": 0,
+  "data": {
+    "test": "这个是成功",
+    "bankCode": "BCCB",
+    "bankName": "北京银行",
+    "cardType": 1,
+
+    "orderQuota": 3000,
+    "cellPhone": "147****0002",
+    "sLimit": 8000,
+    "bizType": 12,
+
+    "idNo": "3*****333333",
+    "userName": "张*",
+
+    "orderId": "1111111",
+    "url": "http://www.baidu.com",
+
+
+    "contractLoanState": 0,
+    "contractAuthState": 1
+
+  }
 }

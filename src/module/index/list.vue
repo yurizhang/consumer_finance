@@ -4,9 +4,7 @@
       <!-- <van-button type="primary" @click="sayYes()">Primary</van-button> -->
       <!-- <input id="top_bar_title" type="hidden" value="首付出发账单"> -->
       <!-- 这个 top_bar_title 有可能是APP读取的时候用的-->
-    <div v-if="billList.length==0" class="fakeloader">
-		<van-loading type="spinner" color="black" />
-	</div>
+
     <div class="all">        		
 		<ul class="bill">        			
 		   <router-link  :to="'/detail?id='+item.id+'&querytype='+querytype" v-for="(item,index) in billList" :key="index"> 
@@ -20,8 +18,19 @@
                 <p class="nineColor">申请日期：{{item.applyTime}}</p>
             </li>
 		   </router-link>        			
-		 </ul>     
-    </div>  
+		 </ul>
+
+		 <div class="empty"  v-show="billList.length==0">
+			<div v-if='loading'>
+				<van-loading type="spinner" color="black" />
+			</div>
+			<div v-else>
+				<img :src="img_none_2x"  :srcset="img_none_3x + ' 3x'">
+				
+				<p>暂无订单</p>
+        	</div>
+		 </div>
+    </div>
 
 </div>
 </template>
@@ -46,6 +55,8 @@ LISTSTATE[2]='待还款';
 LISTSTATE[3]='已还清';   //state 1 已逾期，2，待还款 3,已还清, 4 已取消
 LISTSTATE[4]='已取消';
 import right_arrow from '../../common/img/right_arrow.png'
+import img_none_2x from '../../common/img/bill_none_2x.png';
+import img_none_3x from '../../common/img/bill_none_3x.png';
 export default {
   name: "button",
   data(){
@@ -53,7 +64,10 @@ export default {
 		  billList:[],
 		  querytype:3,
 
-		  right_arrow
+		  right_arrow,
+		  img_none_2x,
+		  img_none_3x,
+		  loading:true,
 	  }
   },
   created(){
@@ -93,13 +107,15 @@ export default {
                 }     
                 axios.get(__URILIST[1], {params:request}).then( response=> {
                     if(response.data.success){                             
-							this.billList=response.data.data;							
+							this.billList=response.data.data.billList;							
                     }else{
                         alert(response.data.msg);
-                    }
+					}
+					this.loading=false;
                     
                 }).catch((error) =>{
 					console.log(error);
+					this.loading=false;
 					//reject(error);
 				}); 
 			   //resolve('ok1');

@@ -126,33 +126,7 @@ import TrendFun from '../../plugs/function';
 let trendFun=new TrendFun();
 const __URILIST = _global.URILIST;
 
-const banklist=`
-    <div class="bank-support-list">
-       <div class="bank-list show">
-            <ul id="debitBanks">
 
-                <li><span class="bank-icon SZPAB"></span><span class="bank-name">平安银行</span></li>
-                <li><span class="bank-icon CMB"></span><span class="bank-name">招商银行</span></li>
-                <li><span class="bank-icon BOS"></span><span class="bank-name">上海银行</span></li>
-                <li><span class="bank-icon HXB"></span><span class="bank-name">华夏银行</span></li>
-                <li><span class="bank-icon SPDB"></span><span class="bank-name">浦东发展银行</span></li>
-                <li><span class="bank-icon BCCB"></span><span class="bank-name">北京银行</span></li>
-                <li><span class="bank-icon COMM"></span><span class="bank-name">交通银行</span></li>
-                <li><span class="bank-icon PSBC"></span><span class="bank-name">中国邮储银行</span></li>
-                <li><span class="bank-icon CMBC"></span><span class="bank-name">民生银行</span></li>
-                <li><span class="bank-icon CEB"></span><span class="bank-name">光大银行</span></li>
-                <li><span class="bank-icon CITIC"></span><span class="bank-name">中信银行</span></li>
-                <li><span class="bank-icon CIB"></span><span class="bank-name">兴业银行</span></li>
-                <li><span class="bank-icon CCB"></span><span class="bank-name">建设银行</span></li>
-                <li><span class="bank-icon GDB"></span><span class="bank-name">广东发展银行</span></li>
-                <li><span class="bank-icon ABC"></span><span class="bank-name">农业银行</span></li>
-                <li><span class="bank-icon BOC"></span><span class="bank-name">中国银行</span></li>
-                <li><span class="bank-icon ICBC"></span><span class="bank-name">工商银行</span></li>           
-
-            </ul>
-        </div>
-    </div>
-`;
 
 const CARDTYPE=[];  //cardType卡类型1借记卡 2信用卡 0银行卡（未知卡）
 CARDTYPE[1]='借记卡';
@@ -184,7 +158,8 @@ export default {
 
           oneStep: true,  //上一步
           twoStep: false,  //下一步
-          CARDTYPE
+          CARDTYPE,
+          bankList:[]  //支持我银行卡列表
       }
   },
   created(){
@@ -193,30 +168,48 @@ export default {
       axios.get(__URILIST[13]).then(response => {
           if (response.data.success) {
                 this.idNo=response.data.data.idNo;  // 身份证号
-                this.userName=response.data.data.idNo; // 姓名           
+                this.userName=response.data.data.userName; // 姓名           
           } else {
             alert(response.data.msg);
           }
-        })
+        });
+
+        this.getSupportBankList();
+        
 
   },
   methods: {
     backIndex() {
           this.currentStep=1;
           this.oneStep=true;
-          this.twoStep=false;
-
-		  //this.$router.push({ path: '/banklist'});  // , query: { from: 'list' }}
+          this.twoStep=false;		
 		  return;
-        //   Dialog.alert({
-        //     message: '弹窗内容---'
-        //   }).then(() => {
-        //       alert("clsoed");
-        //   });
+
 	},
     supportBankList() {
+
+let banklist=`
+    <div class="bank-support-list">
+       <div class="bank-list show">
+            <ul id="debitBanks">
+           `
+        
+            for(let i=0; i < this.bankList.length; i++) {   
+                banklist+=  `<li><span class="bank-icon ${this.bankList[i].bankCode}"></span><span class="bank-name">${this.bankList[i].bankName} (${CARDTYPE[this.bankList[i].cardType]})</span></li>`
+            }
+
+
+             
+         banklist+=`         
+
+            </ul>
+        </div>
+    </div>
+`;
+
+          console.log(this.bankList);
           Dialog.alert({
-            title:'储蓄卡',
+            title:'银行卡',
             message: banklist
           }).then(() => {
               //alert("clsoed");
@@ -242,24 +235,7 @@ export default {
                 cardNo:this.cardNo, //银行卡号
                 type:2  // 1：开通时实名验证，2：添加银行卡代扣卡
             }
-            // axios.post(__URILIST[14],request).then(response => {
-            //         if (response.data.success) {                            
-            //                 this.bankinfo= response.data.data;   
-            //                 // {
-            //                 //     "bankCode" : "BCCB",
-            //                 //     "bankName" : "北京银行",
-            //                 //     "cardType" : 1 // 卡类型1借记卡 2信用卡 0银行卡（未知卡）
-            //                 // } 
-            //                 this.oneStep=false;            
-            //                 this.currentStep=2;
-            //                 //得到银行卡号
-            //                 //ajax显示一下
-            //                 this.twoStep=true; //进入第二步                                     
-            //         } else {
-            //             Dialog.alert({message:response.data.msg})
-            //             //alert(response.data.msg);
-            //         }
-            // });           
+         
 
             let response= await this.getBankinfo(request);
             if(response.success){
@@ -362,6 +338,18 @@ export default {
             },1000);
 
 
+    },
+    getSupportBankList(){
+        axios.get(__URILIST[28]).then(response => {
+            if (response.data.success) {
+                    this.bankList=response.data.data;
+                    //  {
+                    //     "bankCode" : "BCCB",
+                    //     "bankName" : "北京银行",
+                    //     "cardType" : 1 // 卡类型1借记卡 2信用卡 0银行卡（未知卡）
+                    //  },   
+            }
+        })
     }
   }
 

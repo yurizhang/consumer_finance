@@ -89,9 +89,7 @@ u {
 
 html,
 body {
-  height: 100%;
-  background: #F2F3F8;
-  /* font-family: "Microsoft YaHei", "微软雅黑", Arial, Verdana, "宋体"; */
+   /* font-family: "Microsoft YaHei", "微软雅黑", Arial, Verdana, "宋体"; */
   font-family: HelveticaNeue, "San Francisco", "Droid Sans";
 }
 
@@ -123,7 +121,7 @@ select {
   margin: 0;
   border-radius: 0
 }
-
+/* 
 @media screen and (min-width: 320px) {
   html {
     font-size: 31.25%;
@@ -144,9 +142,7 @@ select {
   html {
     font-size: 36.6211%;
   }
-  .panel ul li {
-    min-height: 125px;
-  }
+
 }
 
 @media screen and (min-width: 400px) {
@@ -159,9 +155,7 @@ select {
   html {
     font-size: 40.42969%;
   }
-  .panel ul li {
-    min-height: 138px;
-  }
+
 }
 
 @media screen and (min-width: 440px) {
@@ -228,7 +222,7 @@ select {
   html {
     font-size: 93.75%;
   }
-}
+} */
 
 * {
   -webkit-box-sizing: border-box;

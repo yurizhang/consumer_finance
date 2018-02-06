@@ -166,7 +166,7 @@ export default {
       axios.get(__URILIST[13]).then(response => {
           if (response.data.success) {
                 this.idNo=response.data.data.idNo;  // 身份证号
-                this.userName=response.data.data.idNo; // 姓名           
+                this.userName=response.data.data.userName; // 姓名           
           } else {
             alert(response.data.msg);
           }

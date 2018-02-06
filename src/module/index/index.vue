@@ -119,7 +119,7 @@
             </router-link>
         </li>
         <li>
-            <a href="https://8.m.tuniu.com/xdm/resources/helper.html">
+             <router-link  to="/help">  
                 <div class="item">
                     <div class="icon"><img :src="userCenter_icon_9" alt="帮助中心"></div>
                     <div class="detail">
@@ -127,7 +127,7 @@
                         <p>不会使用?点我看</p>
                     </div>
                 </div>
-            </a>
+            </router-link>
         </li>
         <li>
             <router-link  to="/contractlist"> 
@@ -149,10 +149,40 @@
 </template>
 
 <script>
-import { Dialog } from 'vant';
+import { Dialog,Toast } from 'vant';
 import axios from 'axios';
 import  * as _global from '../../plugs/global';
 import TrendFun from '../../plugs/function';
+
+
+// //添加请求拦截器
+// axios.interceptors.request.use(function(config){
+//      //在发送请求之前做某事
+//      console.log(config);
+//    },function(error){
+//      //请求错误时做些事
+//      console.log("request error:");
+//      console.log(error);
+//     // return Promise.reject(error);
+// });
+ 
+// //添加响应拦截器
+// axios.interceptors.response.use (function(response){
+//      //对响应数据做些事
+//       console.log(response);
+//       if(response.data.errorCode==500){
+//           location.href=response.data.data.redirectUrl+"http://localhost:8090/module/index.html";
+//           return false;
+//       }
+       
+//       return response;
+//    },function(error){
+//      //请求错误时做些事
+//      // console.log("response error:");
+//       //console.log(error);
+//       //return Promise.reject(error);
+// });
+
 
 //axios.defaults.headers.common['TN-REQ-DATA-TYPE'] = 'json/text';
 let trendFun=new TrendFun(); //公共函数库
@@ -205,7 +235,11 @@ import userCenter_icon_10 from '../../common/img/10.png'
 
       }
     },    
-    created(){          
+    created(){
+        Toast.loading({ mask: true,  duration: 0,       // 持续展示 toast
+                forbidClick: true, // 禁用背景点击
+                message: '正在加载中...'
+        });        
         this.getIndex();
 
     },
@@ -224,6 +258,7 @@ import userCenter_icon_10 from '../../common/img/10.png'
                 axios.get(__URILIST[0]).then( response=> {
                     //if(_global._DEBUG) console.log( response.data);
                     //let response=response.data;
+                    Toast.clear();
                     if(response.data.success){ 
                             //console.log( this.data)
                             if(response.data.data.isActive!=1){
@@ -246,6 +281,7 @@ import userCenter_icon_10 from '../../common/img/10.png'
                     
                 }).catch((error) =>{
                     console.log(error);
+                    Toast.clear();
                 });    
          },
          number_format(number, decimals, dec_point, thousands_sep){
@@ -281,11 +317,5 @@ import userCenter_icon_10 from '../../common/img/10.png'
   }
 </script>
 
-<style>
-    .anim{
-        transition: top 0.5s;
-        position: relative;       
-    }
 
-</style>
 
